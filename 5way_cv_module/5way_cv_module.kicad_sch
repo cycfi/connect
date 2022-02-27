@@ -1,0 +1,27 @@
+(kicad_sch (version 20211123) (generator eeschema)
+
+  (uuid e63e39d7-6ac0-4ffd-8aa3-1841a4541b55)
+
+  (paper "A4")
+
+  (title_block
+    (title "5-way CV Module")
+    (date "2022-02-24")
+    (rev "v3.0")
+    (company "Document Number: 2022002")
+  )
+
+  (lib_symbols
+  )
+
+
+  (text "Licensed under a Creative Commons Attribution-ShareAlike 4.0 International License. \nhttp://creativecommons.org/licenses/by-nc/4.0/\n\nCopyright Cycfi Research Inc. 2013-2022"
+    (at 24.13 187.96 0)
+    (effects (font (size 1.524 1.524)) (justify left bottom))
+    (uuid c01d25cd-f4bb-4ef3-b5ea-533a2a4ddb2b)
+  )
+
+  (sheet_instances
+    (path "/" (page "1"))
+  )
+)
