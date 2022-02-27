@@ -341,6 +341,11 @@
     (stroke (width 0) (type default) (color 0 0 0 0))
     (uuid 4f3c4363-b92d-4a90-982f-1fed4157e1ec)
   )
+  (polyline (pts (xy 189.23 100.33) (xy 190.5 100.33))
+    (stroke (width 0) (type default) (color 0 0 0 0))
+    (uuid 58a22765-7f2e-4f66-9ea8-f56fcca75dda)
+  )
+
   (wire (pts (xy 198.12 72.39) (xy 198.12 77.47))
     (stroke (width 0) (type default) (color 0 0 0 0))
     (uuid 591d1646-c7f5-44c5-a1be-441aa8f670e1)
@@ -370,6 +375,10 @@
     (stroke (width 0) (type default) (color 0 0 0 0))
     (uuid c318fcd1-79e9-4098-983f-8fb30c676779)
   )
+  (polyline (pts (xy 187.96 55.88) (xy 187.96 100.33))
+    (stroke (width 0) (type default) (color 0 0 0 0))
+    (uuid cc016ca4-b9a4-4d80-91ba-91d6e0df5bcc)
+  )
 
   (wire (pts (xy 198.12 72.39) (xy 200.66 72.39))
     (stroke (width 0) (type default) (color 0 0 0 0))
@@ -389,10 +398,9 @@
     (effects (font (size 1.524 1.524)) (justify left bottom))
     (uuid c01d25cd-f4bb-4ef3-b5ea-533a2a4ddb2b)
   )
-
-  (label "Mounting Holes" (at 196.85 97.79 0)
+  (text "Mounting Holes" (at 198.12 97.79 0)
     (effects (font (size 1.524 1.524)) (justify left bottom))
-    (uuid f27a0a1a-93ad-49f4-89fe-1730de977ec9)
+    (uuid db002d44-34dc-4a16-a373-be2b73d8ad8e)
   )
 
   (global_label "neck2" (shape input) (at 133.35 73.66 0) (fields_autoplaced)
