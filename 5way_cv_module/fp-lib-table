@@ -1,4 +1,0 @@
-(fp_lib_table
-  (lib (name "cycfi_library")(type "KiCad")(uri "${KIPRJMOD}/../pcb_common/kicad/cycfi_library.pretty")(options "")(descr ""))
-  (lib (name "connect_library")(type "KiCad")(uri "/Users/joel/dev/cycfi/connect/lib/kicad/connect_library.pretty")(options "")(descr ""))
-)
