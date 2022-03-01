@@ -5,7 +5,7 @@
   (paper "A4")
 
   (title_block
-    (title "5-way CV Module")
+    (title "5-way CV Switch")
     (date "2022-02-24")
     (rev "v3.0")
     (company "Document Number: 2022002")
@@ -1405,7 +1405,7 @@
     (in_bom yes) (on_board yes)
     (uuid e69c64f9-717d-4a97-b3df-80325ec2fa63)
     (property "Reference" "U2" (id 0) (at 191.77 49.53 0))
-    (property "Value" "opamp_dbv2" (id 1) (at 191.77 52.0669 0))
+    (property "Value" "LMV321IDBVR" (id 1) (at 191.77 52.0669 0))
     (property "Footprint" "Package_TO_SOT_SMD:SOT-23-5" (id 2) (at 180.34 62.23 0)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
@@ -1497,7 +1497,7 @@
       (reference "U1") (unit 1) (value "HT7550-1") (footprint "Package_TO_SOT_SMD:SOT-89-3")
     )
     (path "/e69c64f9-717d-4a97-b3df-80325ec2fa63"
-      (reference "U2") (unit 1) (value "opamp_dbv2") (footprint "Package_TO_SOT_SMD:SOT-23-5")
+      (reference "U2") (unit 1) (value "LMV321IDBVR") (footprint "Package_TO_SOT_SMD:SOT-23-5")
     )
   )
 )
