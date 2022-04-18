@@ -27,3 +27,8 @@ fp-info-cache
 # Exported BOM files
 *.xml
 *.csv
+*gerber*
+/5way_cv_switch/panel/5way_cv_switch_panel.kicad_pcb
+/5way_cv_switch/panel/5way_cv_switch_panel.kicad_pro
+/cv_pot_small/panel/cv_pot_small_panel.kicad_pcb
+/cv_pot_small/panel/cv_pot_small_panel.kicad_pro
