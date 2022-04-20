@@ -8,8 +8,8 @@ kikit panelize \
     --fiducials '3fid; hoffset: 5mm; voffset: 2.5mm; coppersize: 2mm; opening: 1mm;' \
     --text 'simple; text: JLCJLCJLCJLC; anchor: mt; voffset: 2.5mm; hjustify: center; vjustify: center;' \
     --post 'millradius: 1mm' \
-    ../cv_pot_small.kicad_pcb cv_pot_small_panel.kicad_pcb
+    ../cv_pot_big.kicad_pcb cv_pot_big_panel.kicad_pcb
 
-kikit fab jlcpcb --no-drc --assembly --schematic ../cv_pot_small.kicad_sch cv_pot_small_panel.kicad_pcb .
-mv gerbers.zip cv_pot_small_gerbers.zip
+kikit fab jlcpcb --no-drc --assembly --schematic ../cv_pot_big.kicad_sch cv_pot_big_panel.kicad_pcb .
+mv gerbers.zip cv_pot_big_gerbers.zip
 

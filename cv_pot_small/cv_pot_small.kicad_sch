@@ -5,10 +5,10 @@
   (paper "A4")
 
   (title_block
-    (title "5-way CV Module")
+    (title "CV Pot Small")
     (date "2022-02-24")
     (rev "v3.0")
-    (company "Document Number: 2022002")
+    (company "Document Number: 2022004")
   )
 
   (lib_symbols
