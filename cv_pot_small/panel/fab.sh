@@ -1,5 +1,5 @@
 kikit panelize \
-    --layout 'grid; rows: 4; cols: 4; space: 2mm' \
+    --layout 'grid; rows: 5; cols: 4; space: 2mm' \
     --tabs 'fixed; width: 5mm; vcount: 2; hcount: 1' \
     --cuts 'mousebites; drill: 0.5mm; spacing: 1mm; offset: -0.251mm; prolong: -0.3mm' \
     --post 'millradius: 1mm' \
