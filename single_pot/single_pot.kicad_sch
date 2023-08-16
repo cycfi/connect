@@ -540,7 +540,7 @@
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 9c599602-3e33-4423-8cbd-18a49d3426b4)
     (property "Reference" "R1" (id 0) (at 131.445 100.3356 90))
-    (property "Value" "4.7k" (id 1) (at 133.1472 100.7364 0)
+    (property "Value" "100k" (id 1) (at 133.1472 100.7364 0)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
     (property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" (id 2) (at 131.445 102.235 0)
@@ -548,6 +548,9 @@
     )
     (property "Datasheet" "~" (id 3) (at 131.445 102.235 0)
       (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "LCSC" "C149504" (id 4) (at 131.445 102.235 90)
+      (effects (font (size 1.524 1.524)) hide)
     )
     (pin "1" (uuid 048897fc-faf5-49da-b8dd-c90618761c05))
     (pin "2" (uuid 57e2a8de-635a-430b-8063-0e86f1cf06e8))
@@ -643,7 +646,7 @@
       (reference "JP1") (unit 1) (value "SolderJumper_2_Open") (footprint "Jumper:SolderJumper-2_P1.3mm_Open_TrianglePad1.0x1.5mm")
     )
     (path "/9c599602-3e33-4423-8cbd-18a49d3426b4"
-      (reference "R1") (unit 1) (value "4.7k") (footprint "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder")
+      (reference "R1") (unit 1) (value "100k") (footprint "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder")
     )
     (path "/9763309a-c9ed-492f-a4a9-0b6f407725b0"
       (reference "RV1") (unit 1) (value "500k") (footprint "cycfi_library:bourns_pdb241")

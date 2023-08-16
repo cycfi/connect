@@ -10,6 +10,6 @@ kikit panelize \
     --post 'millradius: 1mm' \
     ../single_pot.kicad_pcb single_pot_panel.kicad_pcb
 
-kikit fab jlcpcb --no-drc single_pot_panel.kicad_pcb .
+kikit fab jlcpcb --no-drc --assembly --schematic ../single_pot.kicad_sch single_pot_panel.kicad_pcb .
 mv gerbers.zip single_pot_gerbers.zip
 
