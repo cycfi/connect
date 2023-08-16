@@ -10,6 +10,6 @@ kikit panelize \
     --post 'millradius: 1mm' \
     ../concentric_pot.kicad_pcb concentric_pot_panel.kicad_pcb
 
-kikit fab jlcpcb --no-drc concentric_pot_panel.kicad_pcb .
+kikit fab jlcpcb --no-drc --assembly --schematic ../concentric_pot.kicad_sch concentric_pot_panel.kicad_pcb .
 mv gerbers.zip concentric_pot_gerbers.zip
 

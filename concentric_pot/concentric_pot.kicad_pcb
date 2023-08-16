@@ -85,8 +85,8 @@
   (net 3 "WIPER_INNER")
   (net 4 "WIPER_OUTER")
   (net 5 "MAX_OUTER")
-  (net 6 "Net-(R2-Pad2)")
-  (net 7 "Net-(R1-Pad2)")
+  (net 6 "Net-(JP1-Pad1)")
+  (net 7 "Net-(JP2-Pad1)")
 
   (footprint "cycfi_library:alpha_concentric_pot" (layer "F.Cu")
     (tedit 62B18AF1) (tstamp d6724ec7-b419-4437-a429-60f80d1f54d6)
@@ -144,7 +144,7 @@
     (fp_line (start 1.65 -1.25) (end -1.65 -1.25) (layer "B.CrtYd") (width 0.05) (tstamp 61530f12-40f1-4297-ad9d-34d36ea5258d))
     (fp_line (start 1.65 -1.25) (end 1.65 1.25) (layer "B.CrtYd") (width 0.05) (tstamp c163b3e3-a51e-4963-b5e7-1dbbee2940bd))
     (pad "1" smd custom (at -0.725 0 180) (size 0.3 0.3) (layers "B.Cu" "B.Mask")
-      (net 7 "Net-(R1-Pad2)") (pinfunction "A") (pintype "passive") (zone_connect 2)
+      (net 6 "Net-(JP1-Pad1)") (pinfunction "A") (pintype "passive") (zone_connect 2)
       (options (clearance outline) (anchor rect))
       (primitives
         (gr_poly (pts
@@ -210,6 +210,7 @@
     (at 198.8 68.5 180)
     (descr "Resistor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "resistor handsolder")
+    (property "LCSC" "C17673")
     (property "Sheetfile" "File: concentric_pot.kicad_sch")
     (property "Sheetname" "")
     (path "/5644c247-133d-48fc-88a6-d4c81388f6a8")
@@ -239,7 +240,7 @@
     (pad "1" smd roundrect (at -1 0 180) (size 1.2 1.4) (layers "B.Cu" "B.Paste" "B.Mask") (roundrect_rratio 0.208333)
       (net 2 "GND") (pintype "passive") (tstamp 8d35a73b-7af2-4eeb-9774-725f3b601e37))
     (pad "2" smd roundrect (at 1 0 180) (size 1.2 1.4) (layers "B.Cu" "B.Paste" "B.Mask") (roundrect_rratio 0.208333)
-      (net 6 "Net-(R2-Pad2)") (pintype "passive") (tstamp 97412d12-b45e-4476-ac6b-f5f7e9264f73))
+      (net 7 "Net-(JP2-Pad1)") (pintype "passive") (tstamp 97412d12-b45e-4476-ac6b-f5f7e9264f73))
     (model "${KICAD6_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0805_2012Metric.wrl"
       (offset (xyz 0 0 0))
       (scale (xyz 1 1 1))
@@ -273,7 +274,7 @@
     (fp_line (start -1.65 1.25) (end 1.65 1.25) (layer "B.CrtYd") (width 0.05) (tstamp df6108f3-3fba-46e0-b171-581a9c2d0e59))
     (fp_line (start -1.65 1.25) (end -1.65 -1.25) (layer "B.CrtYd") (width 0.05) (tstamp e82c3f87-d089-4c2f-adb2-95930aec567e))
     (pad "1" smd custom (at -0.725 0 180) (size 0.3 0.3) (layers "B.Cu" "B.Mask")
-      (net 6 "Net-(R2-Pad2)") (pinfunction "A") (pintype "passive") (zone_connect 2)
+      (net 7 "Net-(JP2-Pad1)") (pinfunction "A") (pintype "passive") (zone_connect 2)
       (options (clearance outline) (anchor rect))
       (primitives
         (gr_poly (pts
@@ -303,6 +304,7 @@
     (at 198.8 53.5 180)
     (descr "Resistor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "resistor handsolder")
+    (property "LCSC" "C17673")
     (property "Sheetfile" "File: concentric_pot.kicad_sch")
     (property "Sheetname" "")
     (path "/c9454370-26dd-4d91-9d86-8404d23a42c9")
@@ -332,7 +334,7 @@
     (pad "1" smd roundrect (at -1 0 180) (size 1.2 1.4) (layers "B.Cu" "B.Paste" "B.Mask") (roundrect_rratio 0.208333)
       (net 2 "GND") (pintype "passive") (tstamp d72a9221-6066-42fc-a9c1-51550fb39f39))
     (pad "2" smd roundrect (at 1 0 180) (size 1.2 1.4) (layers "B.Cu" "B.Paste" "B.Mask") (roundrect_rratio 0.208333)
-      (net 7 "Net-(R1-Pad2)") (pintype "passive") (tstamp c29de3e8-13fa-44e2-923d-c2c242cc2047))
+      (net 6 "Net-(JP1-Pad1)") (pintype "passive") (tstamp c29de3e8-13fa-44e2-923d-c2c242cc2047))
     (model "${KICAD6_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0805_2012Metric.wrl"
       (offset (xyz 0 0 0))
       (scale (xyz 1 1 1))
@@ -400,8 +402,8 @@
   (segment (start 197.85 57) (end 199.5 57) (width 0.4) (layer "B.Cu") (net 5) (tstamp 0f230ea3-3de9-40cd-8d11-1c7bd538a5ce))
   (segment (start 190.692722 58.951678) (end 195.898322 58.951678) (width 0.4) (layer "B.Cu") (net 5) (tstamp 2d071f52-30fd-4141-a3aa-2afd452bc122))
   (segment (start 190.24 59.4044) (end 190.692722 58.951678) (width 0.4) (layer "B.Cu") (net 5) (tstamp b8a556f7-e9b9-4e2d-953b-8854460c8445))
-  (segment (start 197.8 68.5) (end 195.425 68.5) (width 0.4) (layer "B.Cu") (net 6) (tstamp 140d8a7e-983e-486c-8a55-1c65ceeedc3b))
-  (segment (start 197.8 53.5) (end 195.425 53.5) (width 0.4) (layer "B.Cu") (net 7) (tstamp 987caadf-0422-44b8-8bef-6ac56241fb8b))
+  (segment (start 197.8 53.5) (end 195.425 53.5) (width 0.4) (layer "B.Cu") (net 6) (tstamp 987caadf-0422-44b8-8bef-6ac56241fb8b))
+  (segment (start 197.8 68.5) (end 195.425 68.5) (width 0.4) (layer "B.Cu") (net 7) (tstamp 140d8a7e-983e-486c-8a55-1c65ceeedc3b))
 
   (zone (net 2) (net_name "GND") (layers F&B.Cu) (tstamp 0fc3ac24-a476-4efd-a8dc-bc5c736dd1db) (hatch edge 0.508)
     (connect_pads (clearance 0.3))
