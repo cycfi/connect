@@ -844,7 +844,7 @@
     (effects (font (size 1.524 1.524)) (justify left bottom))
     (uuid 395e3272-41d2-44a1-a63a-e2d4e45311f0)
   )
-  (text "Licensed under a Creative Commons Attribution-ShareAlike 4.0 International License. \nhttp://creativecommons.org/licenses/by-nc/4.0/\n\nCopyright Cycfi Research Inc. 2013-2022"
+  (text "Licensed under a Creative Commons Attribution-ShareAlike 4.0 International License. \nhttp://creativecommons.org/licenses/by-nc/4.0/\n\nCopyright Cycfi Research Inc. 2013-2024"
     (at 24.13 187.96 0)
     (effects (font (size 1.524 1.524)) (justify left bottom))
     (uuid c01d25cd-f4bb-4ef3-b5ea-533a2a4ddb2b)
