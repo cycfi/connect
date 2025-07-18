@@ -31,3 +31,4 @@ fp-info-cache
 *gerber*
 *panel.kicad_pro
 *panel.kicad_pcb
+*.kicad_pcb.lck
