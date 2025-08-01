@@ -32,3 +32,4 @@ fp-info-cache
 *panel.kicad_pro
 *panel.kicad_pcb
 *.kicad_pcb.lck
+~*.*

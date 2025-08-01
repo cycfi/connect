@@ -160,7 +160,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -661,7 +661,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -1090,7 +1090,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Diode, small symbol"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -1109,6 +1109,32 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "b8296d50-f8d8-4a86-92a2-3d201391b2d0")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Device" "D"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "6eb0cafb-7eb4-4b37-ac70-2c536ad6df25")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "d3772b3f-ccf8-4362-80be-933c94235a1f")
 			(effects
 				(font
 					(size 1 1)
@@ -1376,7 +1402,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -1673,7 +1699,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Positive Linear Regulator, Fixed Output 1: GND, 2: INPUT, 3: OUTPUT"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -2033,7 +2059,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Unipolar Ratiometric Linear Hall Effect Sensor, SOT-23"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -2391,7 +2417,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -2604,7 +2630,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
