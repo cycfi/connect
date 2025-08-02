@@ -33,3 +33,4 @@ fp-info-cache
 *panel.kicad_pcb
 *.kicad_pcb.lck
 ~*.*
+*#auto_saved_files#*
