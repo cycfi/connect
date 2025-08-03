@@ -1130,6 +1130,17 @@
 		)
 		(uuid 8f8b00f6-d219-42cf-9e52-5be48203e434)
 	)
+	(text "Note: R1 forms one leg of the passive \nmixing network (see e_whammy_control) \nand also protects against reversed \nconnections."
+		(exclude_from_sim no)
+		(at 142.748 127 0)
+		(effects
+			(font
+				(size 1.2 1.2)
+			)
+			(justify left)
+		)
+		(uuid "1fbb81e8-c76f-4e90-a4a9-692576553963")
+	)
 	(text "Connector"
 		(exclude_from_sim no)
 		(at 172.212 43.434 0)
@@ -1199,12 +1210,6 @@
 		(uuid "3fdf6d85-f714-4055-90df-451a8021345f")
 	)
 	(junction
-		(at 156.845 118.11)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "4ad1abb1-32aa-4941-9ee2-744128cb7aa0")
-	)
-	(junction
 		(at 115.57 58.42)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1215,16 +1220,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "94331d42-bd7c-4760-a0a4-d49c9eaa5644")
-	)
-	(wire
-		(pts
-			(xy 156.845 114.935) (xy 156.845 118.11)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "053b3733-fe1b-438d-a122-eb2809b8b3e1")
 	)
 	(wire
 		(pts
@@ -1275,16 +1270,6 @@
 			(type default)
 		)
 		(uuid "1596f95e-2685-4843-bd1e-a764419e3277")
-	)
-	(wire
-		(pts
-			(xy 156.845 107.315) (xy 156.845 105.41)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1cace66b-356f-4a8d-8bb2-2fdd8105b6a3")
 	)
 	(wire
 		(pts
@@ -1388,33 +1373,13 @@
 	)
 	(wire
 		(pts
-			(xy 140.97 118.11) (xy 144.145 118.11)
+			(xy 140.97 118.11) (xy 144.78 118.11)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "97e5df5a-5faa-4103-89b1-37937d9dd44e")
-	)
-	(wire
-		(pts
-			(xy 156.845 105.41) (xy 165.1 105.41)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9aa8ec0d-4a1c-423f-88a7-2916b914e789")
-	)
-	(wire
-		(pts
-			(xy 156.845 118.11) (xy 165.1 118.11)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9e46fb88-5361-4a9a-abaa-71e5d67416cb")
 	)
 	(wire
 		(pts
@@ -1458,7 +1423,7 @@
 	)
 	(wire
 		(pts
-			(xy 151.765 118.11) (xy 156.845 118.11)
+			(xy 152.4 118.11) (xy 157.48 118.11)
 		)
 		(stroke
 			(width 0)
@@ -1594,28 +1559,6 @@
 	)
 	(global_label "5v"
 		(shape input)
-		(at 165.1 105.41 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.4 1.4)
-			)
-			(justify left)
-		)
-		(uuid "785e7afb-5347-4e11-b292-701c649113fb")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 170.5015 105.3148 0)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "5v"
-		(shape input)
 		(at 144.78 58.42 0)
 		(fields_autoplaced yes)
 		(effects
@@ -1638,7 +1581,7 @@
 	)
 	(global_label "OUT"
 		(shape input)
-		(at 165.1 118.11 0)
+		(at 157.48 118.11 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1648,7 +1591,7 @@
 		)
 		(uuid "b16db6aa-eff9-4560-94eb-8f1df0edf71a")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 172.2432 118.0148 0)
+			(at 164.6232 118.0148 0)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -1677,82 +1620,6 @@
 				)
 				(justify right)
 				(hide yes)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 147.955 118.11 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "06c6d121-5405-4f94-9c14-3ea667dedee7")
-		(property "Reference" "R3"
-			(at 147.955 120.6531 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "10K"
-			(at 147.955 123.19 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 147.955 119.888 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 147.955 118.11 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 147.955 118.11 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC" "C25744"
-			(at 147.955 118.11 0)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "c97021ab-b6cc-4b6c-b39c-42b07d37f6d3")
-		)
-		(pin "2"
-			(uuid "19c6a803-8222-43d7-8ceb-fb1883c9e605")
-		)
-		(instances
-			(project ""
-				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-					(reference "R3")
-					(unit 1)
-				)
 			)
 		)
 	)
@@ -2366,23 +2233,24 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 156.845 111.125 180)
+		(at 148.59 118.11 90)
+		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "b551c60d-3e71-4de6-8e3a-7d1bbdbbdf71")
-		(property "Reference" "R5"
-			(at 159.3881 111.125 90)
+		(uuid "b7dcd967-8b03-4bd9-bb8e-f3beb9ae1901")
+		(property "Reference" "R1"
+			(at 148.59 115.5669 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "10K"
-			(at 161.925 111.125 90)
+		(property "Value" "47K"
+			(at 148.59 113.03 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2390,7 +2258,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 158.623 111.125 90)
+			(at 148.59 116.332 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2399,7 +2267,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 156.845 111.125 0)
+			(at 148.59 118.11 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2408,7 +2276,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 156.845 111.125 0)
+			(at 148.59 118.11 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2416,8 +2284,8 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C25744"
-			(at 156.845 111.125 0)
+		(property "LCSC" "C25792"
+			(at 148.59 118.11 0)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -2426,15 +2294,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "ad1b0528-cfe7-4fd2-ac3c-be809a5e2fc2")
+			(uuid "cb972c90-e999-4fa8-a6a1-9f8869df5326")
 		)
 		(pin "2"
-			(uuid "32c4dca4-cf88-47f2-b8f3-3046ddb4265d")
+			(uuid "5b4f5368-77bf-4023-ae65-390c98b989f1")
 		)
 		(instances
-			(project ""
+			(project "e_whammy_hal_sensor"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-					(reference "R5")
+					(reference "R1")
 					(unit 1)
 				)
 			)
