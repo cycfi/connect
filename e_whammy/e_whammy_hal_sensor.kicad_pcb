@@ -621,7 +621,7 @@
 			)
 		)
 	)
-	(footprint "cycfi_library:hole_1.4mm"
+	(footprint "cycfi_library:hole_1.45mm"
 		(layer "F.Cu")
 		(uuid "3dbbd374-4aa5-44da-bc3a-f570b289496d")
 		(at 122.5 98)
@@ -639,7 +639,7 @@
 				)
 			)
 		)
-		(property "Value" "hole_1.4mm"
+		(property "Value" "hole_1.45mm"
 			(at 0 3.2 0)
 			(layer "F.Fab")
 			(uuid "70fa9532-44bc-4728-9cd7-422a94f92188")
@@ -674,7 +674,7 @@
 				)
 			)
 		)
-		(attr board_only exclude_from_pos_files exclude_from_bom)
+		(attr exclude_from_pos_files exclude_from_bom)
 		(fp_circle
 			(center 0 0)
 			(end 0.75 0)
@@ -684,7 +684,7 @@
 			)
 			(fill no)
 			(layer "F.CrtYd")
-			(uuid "ef5332a6-b24e-4a00-9cc1-49c8659b60f6")
+			(uuid "e7bffe8a-0fe8-4c5f-8010-f7808ff7b034")
 		)
 		(fp_text user "${REFERENCE}"
 			(at 0.3 0 0)
@@ -699,10 +699,10 @@
 		)
 		(pad "" np_thru_hole circle
 			(at 0 0)
-			(size 1.4 1.4)
+			(size 1.45 1.45)
 			(drill 1.5)
 			(layers "*.Cu" "*.Mask")
-			(uuid "cd6cda3f-c2b7-4ebe-bd38-a2a7e1fb4922")
+			(uuid "8086ef7c-3c38-44d0-878a-cd84550ae67f")
 		)
 		(embedded_fonts no)
 	)
@@ -1362,7 +1362,7 @@
 			)
 		)
 	)
-	(footprint "cycfi_library:hole_1.4mm"
+	(footprint "cycfi_library:hole_1.45mm"
 		(layer "F.Cu")
 		(uuid "abadeefb-043e-45d3-bd64-a1ea3b0c200b")
 		(at 113.5 98)
@@ -1380,7 +1380,7 @@
 				)
 			)
 		)
-		(property "Value" "hole_1.4mm"
+		(property "Value" "hole_1.45mm"
 			(at 0 3.2 0)
 			(layer "F.Fab")
 			(uuid "90b077fa-d205-45a4-9c3d-877647b45baf")
@@ -1415,7 +1415,7 @@
 				)
 			)
 		)
-		(attr board_only exclude_from_pos_files exclude_from_bom)
+		(attr exclude_from_pos_files exclude_from_bom)
 		(fp_circle
 			(center 0 0)
 			(end 0.75 0)
@@ -1425,7 +1425,7 @@
 			)
 			(fill no)
 			(layer "F.CrtYd")
-			(uuid "fb1db183-15af-4e33-9ae2-9958601c08d9")
+			(uuid "e3b0ebe1-0f34-4567-b3a5-b29e3a0a7a77")
 		)
 		(fp_text user "${REFERENCE}"
 			(at 0.3 0 0)
@@ -1440,10 +1440,10 @@
 		)
 		(pad "" np_thru_hole circle
 			(at 0 0)
-			(size 1.4 1.4)
+			(size 1.45 1.45)
 			(drill 1.5)
 			(layers "*.Cu" "*.Mask")
-			(uuid "e23961f3-8765-4eb8-8831-a1bf372fddb8")
+			(uuid "03a80851-70d8-405a-a27a-c133730f210f")
 		)
 		(embedded_fonts no)
 	)
