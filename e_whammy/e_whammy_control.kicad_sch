@@ -4937,10 +4937,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "68852b8d-2fee-4cbf-b589-50acc7273352")
 		(property "Reference" "D4"
-			(at 200.66 95.25 0)
+			(at 200.66 98.044 0)
 			(effects
 				(font
 					(size 1.27 1.27)
