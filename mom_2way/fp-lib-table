@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "cycfi_library")(type "KiCad")(uri "${CYCFI_COMMON}/kicad/cycfi_library.pretty")(options "")(descr ""))
+)
