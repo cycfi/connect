@@ -301,7 +301,7 @@
 	(footprint "Capacitor_SMD:C_0603_1608Metric"
 		(layer "F.Cu")
 		(uuid "30c1fda5-4202-4f35-88e2-3aba94e9c3f2")
-		(at 149.3 104 -90)
+		(at 149.3 104 90)
 		(descr "Capacitor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "capacitor")
 		(property "Reference" "C2"
@@ -352,7 +352,7 @@
 			)
 		)
 		(property "LCSC" "C15849"
-			(at 0 0 270)
+			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
@@ -370,16 +370,6 @@
 		(sheetfile "mom_2way.kicad_sch")
 		(attr smd)
 		(fp_line
-			(start -0.14058 0.51)
-			(end 0.14058 0.51)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "212c0fa6-61a2-4e21-8dff-3b580e0c9033")
-		)
-		(fp_line
 			(start -0.14058 -0.51)
 			(end 0.14058 -0.51)
 			(stroke
@@ -390,34 +380,14 @@
 			(uuid "1907f147-6a4e-4672-a112-86b0c25cdc01")
 		)
 		(fp_line
-			(start -1.48 0.73)
-			(end -1.48 -0.73)
+			(start -0.14058 0.51)
+			(end 0.14058 0.51)
 			(stroke
-				(width 0.05)
+				(width 0.12)
 				(type solid)
 			)
-			(layer "F.CrtYd")
-			(uuid "5774b83f-9e0e-4977-b28e-fe12e06946af")
-		)
-		(fp_line
-			(start 1.48 0.73)
-			(end -1.48 0.73)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(layer "F.CrtYd")
-			(uuid "e5a24378-b6af-498c-b0cb-93d95eac18f5")
-		)
-		(fp_line
-			(start -1.48 -0.73)
-			(end 1.48 -0.73)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(layer "F.CrtYd")
-			(uuid "d0736c17-f235-4501-a6e8-aa43153bc148")
+			(layer "F.SilkS")
+			(uuid "212c0fa6-61a2-4e21-8dff-3b580e0c9033")
 		)
 		(fp_line
 			(start 1.48 -0.73)
@@ -430,24 +400,44 @@
 			(uuid "be6e0e68-898f-4882-9d97-6f3e27ad8d5c")
 		)
 		(fp_line
-			(start -0.8 0.4)
-			(end -0.8 -0.4)
+			(start -1.48 -0.73)
+			(end 1.48 -0.73)
 			(stroke
-				(width 0.1)
+				(width 0.05)
 				(type solid)
 			)
-			(layer "F.Fab")
-			(uuid "0f46e062-b845-46fe-ba11-95575b5a5ca9")
+			(layer "F.CrtYd")
+			(uuid "d0736c17-f235-4501-a6e8-aa43153bc148")
 		)
 		(fp_line
-			(start 0.8 0.4)
-			(end -0.8 0.4)
+			(start 1.48 0.73)
+			(end -1.48 0.73)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "e5a24378-b6af-498c-b0cb-93d95eac18f5")
+		)
+		(fp_line
+			(start -1.48 0.73)
+			(end -1.48 -0.73)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "5774b83f-9e0e-4977-b28e-fe12e06946af")
+		)
+		(fp_line
+			(start 0.8 -0.4)
+			(end 0.8 0.4)
 			(stroke
 				(width 0.1)
 				(type solid)
 			)
 			(layer "F.Fab")
-			(uuid "b77b415f-1afe-47e0-9da3-161fa3a9bc05")
+			(uuid "ae6d2fc0-5a7f-42d2-89ae-5b1fc1d8135e")
 		)
 		(fp_line
 			(start -0.8 -0.4)
@@ -460,14 +450,24 @@
 			(uuid "8bce4bf0-d2dc-43c3-af38-fc9255afda59")
 		)
 		(fp_line
-			(start 0.8 -0.4)
-			(end 0.8 0.4)
+			(start 0.8 0.4)
+			(end -0.8 0.4)
 			(stroke
 				(width 0.1)
 				(type solid)
 			)
 			(layer "F.Fab")
-			(uuid "ae6d2fc0-5a7f-42d2-89ae-5b1fc1d8135e")
+			(uuid "b77b415f-1afe-47e0-9da3-161fa3a9bc05")
+		)
+		(fp_line
+			(start -0.8 0.4)
+			(end -0.8 -0.4)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "0f46e062-b845-46fe-ba11-95575b5a5ca9")
 		)
 		(fp_text user "${REFERENCE}"
 			(at 0 0 90)
@@ -481,20 +481,20 @@
 			)
 		)
 		(pad "1" smd roundrect
-			(at -0.775 0 270)
-			(size 0.9 0.95)
-			(layers "F.Cu" "F.Mask" "F.Paste")
-			(roundrect_rratio 0.25)
-			(net 3 "Net-(D2-K)")
-			(pintype "passive")
-			(uuid "b42dafab-bf3b-48d7-8656-2f5868886f38")
-		)
-		(pad "2" smd roundrect
-			(at 0.775 0 270)
+			(at -0.775 0 90)
 			(size 0.9 0.95)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
 			(net 1 "GND")
+			(pintype "passive")
+			(uuid "b42dafab-bf3b-48d7-8656-2f5868886f38")
+		)
+		(pad "2" smd roundrect
+			(at 0.775 0 90)
+			(size 0.9 0.95)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(roundrect_rratio 0.25)
+			(net 3 "Net-(D2-K)")
 			(pintype "passive")
 			(uuid "9a9770fa-aa3b-4281-aba6-9dda00ab3db2")
 		)
