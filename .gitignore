@@ -29,9 +29,7 @@ fp-info-cache
 *.csv
 
 *gerber*
-*panel.kicad_pro
-*panel.kicad_pcb
-*panel.kicad_dru
+*panel.*
 *.kicad_pcb.lck
 ~*.*
 *#auto_saved_files#*
