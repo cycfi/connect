@@ -6,8 +6,8 @@
 	(paper "A4")
 	(title_block
 		(title "E-Whammy")
-		(date "2022-02-24")
-		(rev "v1.1")
+		(date "2025-10-30")
+		(rev "v1.2")
 		(company "Document Number: 2024004")
 	)
 	(lib_symbols

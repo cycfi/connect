@@ -148,7 +148,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -160,7 +160,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -196,7 +196,7 @@
 				)
 			)
 		)
-		(property ki_fp_filters "Pin_Header_Straight_1X* Pin_Header_Angled_1X* Socket_Strip_Straight_1X* Socket_Strip_Angled_1X*")
+		(property ki_fp_filters "Connector*:*_1x??_*")
 		(path "/cd61a421-8b7f-4ccf-a635-570d47a12576")
 		(sheetname "/")
 		(sheetfile "e_whammy_hal_sensor.kicad_sch")
@@ -369,7 +369,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 5 "OUT")
-			(pinfunction "P1")
+			(pinfunction "Pin_1")
 			(pintype "passive")
 			(uuid "fa29a438-3d87-4b30-9ad5-da78ad5a7e1a")
 		)
@@ -380,7 +380,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 2 "GND")
-			(pinfunction "P2")
+			(pinfunction "Pin_2")
 			(pintype "passive")
 			(uuid "1312cc90-8a81-457f-ac0b-a8c23b49a254")
 		)
@@ -391,7 +391,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 4 "V+")
-			(pinfunction "P3")
+			(pinfunction "Pin_3")
 			(pintype "passive")
 			(uuid "ca71dced-0cde-42e1-b01c-8cd44a244f4a")
 		)
