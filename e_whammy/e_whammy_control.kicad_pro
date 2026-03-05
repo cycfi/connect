@@ -59,12 +59,7 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [
-        [
-          "starved_thermal|163200000|151810000|a5bc50b3-f5b4-48c0-93e0-d2f3b17ebd21|0936063e-ce44-48d2-be81-db78db8e01bf|F.Cu",
-          ""
-        ]
-      ],
+      "drc_exclusions": [],
       "meta": {
         "filename": "board_design_settings.json",
         "version": 2
@@ -202,6 +197,7 @@
       "track_widths": [
         0.0,
         0.2,
+        0.25,
         0.4,
         0.5
       ],
@@ -488,6 +484,7 @@
       "single_global_label": "ignore",
       "unannotated": "error",
       "unconnected_wire_endpoint": "warning",
+      "undefined_netclass": "error",
       "unit_value_mismatch": "error",
       "unresolved_variable": "error",
       "wire_dangling": "error"
@@ -689,7 +686,7 @@
       "model_mode": 0,
       "workbook_filename": ""
     },
-    "page_layout_descr_file": "${KIPRJMOD}/../pcb_common/kicad/kicad_frame.kicad_wks",
+    "page_layout_descr_file": "kicad-embed://kicad_frame.kicad_wks",
     "plot_directory": "/Users/joel/Desktop/Blog/August 2025/",
     "space_save_all_events": true,
     "spice_adjust_passive_values": false,
