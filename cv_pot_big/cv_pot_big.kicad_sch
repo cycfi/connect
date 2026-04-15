@@ -1574,7 +1574,7 @@
 	)
 	(rectangle
 		(start 78.74 34.798)
-		(end 139.7 74.422)
+		(end 172.085 74.422)
 		(stroke
 			(width 0)
 			(type solid)
@@ -1913,6 +1913,16 @@
 	)
 	(wire
 		(pts
+			(xy 148.59 49.53) (xy 148.59 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5b2fff61-08e5-4f1d-b28d-7acea2190464")
+	)
+	(wire
+		(pts
 			(xy 88.9 95.25) (xy 92.71 95.25)
 		)
 		(stroke
@@ -1960,6 +1970,16 @@
 			(type default)
 		)
 		(uuid "767c5dcd-77db-49db-bc24-d2ae551e86e9")
+	)
+	(wire
+		(pts
+			(xy 153.67 49.53) (xy 148.59 49.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "77b44b7a-48c1-4aa6-90a7-e78594d528ea")
 	)
 	(wire
 		(pts
@@ -2153,6 +2173,16 @@
 	)
 	(wire
 		(pts
+			(xy 148.59 58.42) (xy 148.59 61.595)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ef9a68af-0163-4492-976d-aaca84174f57")
+	)
+	(wire
+		(pts
 			(xy 111.76 57.15) (xy 111.76 60.96)
 		)
 		(stroke
@@ -2304,6 +2334,28 @@
 		(uuid "b16db6aa-eff9-4560-94eb-8f1df0edf71a")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 168.4332 118.0148 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "5v"
+		(shape input)
+		(at 153.67 49.53 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.524 1.524)
+			)
+			(justify left)
+		)
+		(uuid "b8a2ccb7-2161-44b8-ab85-276c0b74f6e7")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 159.0715 49.4348 0)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -2707,6 +2759,71 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 148.59 61.595 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "4f2076af-642b-475d-b62d-ca1f112bcb87")
+		(property "Reference" "#PWR04"
+			(at 148.59 67.945 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 148.59 66.0384 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 148.59 61.595 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 148.59 61.595 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 148.59 61.595 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "b05de61d-3ebe-46a0-82dc-fb9e1a45b8ba")
+		)
+		(instances
+			(project "cv_pot_big"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+					(reference "#PWR04")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:PWR_FLAG")
 		(at 125.73 60.96 180)
 		(unit 1)
@@ -2910,6 +3027,84 @@
 			(project ""
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
 					(reference "R1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 148.59 55.88 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "811214ac-f71a-4dc8-97d6-9bb6b45c89ce")
+		(property "Reference" "C4"
+			(at 150.9141 55.0516 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100nF"
+			(at 150.9141 57.5885 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 148.59 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 148.59 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 148.59 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C307331"
+			(at 148.59 55.88 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "3e0b1d95-1013-4347-bfa8-b4361e3f8d74")
+		)
+		(pin "2"
+			(uuid "c4a0364f-7ad0-4bd3-b5c5-1389b891df64")
+		)
+		(instances
+			(project "cv_pot_big"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+					(reference "C4")
 					(unit 1)
 				)
 			)
@@ -3761,6 +3956,15 @@
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "LCSC" "C544299"
+			(at 142.24 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "2"
