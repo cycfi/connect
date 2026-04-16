@@ -2210,7 +2210,7 @@
 	)
 	(wire
 		(pts
-			(xy 108.585 114.935) (xy 111.125 114.935)
+			(xy 105.41 114.935) (xy 111.125 114.935)
 		)
 		(stroke
 			(width 0)
@@ -2250,7 +2250,7 @@
 	)
 	(wire
 		(pts
-			(xy 92.075 114.935) (xy 100.965 114.935)
+			(xy 92.075 114.935) (xy 97.79 114.935)
 		)
 		(stroke
 			(width 0)
@@ -2308,7 +2308,7 @@
 		)
 		(uuid "f1e2d1a9-bf85-463e-a9fc-6f157270b310")
 	)
-	(global_label "in+"
+	(global_label "IN+"
 		(shape input)
 		(at 84.455 94.615 180)
 		(fields_autoplaced yes)
@@ -2330,7 +2330,7 @@
 			)
 		)
 	)
-	(global_label "in+"
+	(global_label "IN+"
 		(shape input)
 		(at 83.185 54.61 180)
 		(fields_autoplaced yes)
@@ -2352,7 +2352,7 @@
 			)
 		)
 	)
-	(global_label "out"
+	(global_label "OUT"
 		(shape input)
 		(at 190.5 117.475 0)
 		(fields_autoplaced yes)
@@ -2374,7 +2374,7 @@
 			)
 		)
 	)
-	(global_label "vcc"
+	(global_label "VCC"
 		(shape input)
 		(at 106.045 94.615 180)
 		(fields_autoplaced yes)
@@ -2396,7 +2396,7 @@
 			)
 		)
 	)
-	(global_label "v+"
+	(global_label "V+"
 		(shape input)
 		(at 95.885 59.69 0)
 		(fields_autoplaced yes)
@@ -2418,7 +2418,7 @@
 			)
 		)
 	)
-	(global_label "vcc"
+	(global_label "VCC"
 		(shape input)
 		(at 134.62 106.045 0)
 		(fields_autoplaced yes)
@@ -2440,7 +2440,7 @@
 			)
 		)
 	)
-	(global_label "vcc"
+	(global_label "VCC"
 		(shape input)
 		(at 195.58 50.8 0)
 		(fields_autoplaced yes)
@@ -2462,7 +2462,7 @@
 			)
 		)
 	)
-	(global_label "v+"
+	(global_label "V+"
 		(shape input)
 		(at 153.67 50.8 180)
 		(fields_autoplaced yes)
@@ -2484,7 +2484,7 @@
 			)
 		)
 	)
-	(global_label "out"
+	(global_label "OUT"
 		(shape input)
 		(at 95.885 54.61 0)
 		(fields_autoplaced yes)
@@ -2506,7 +2506,7 @@
 			)
 		)
 	)
-	(global_label "v+"
+	(global_label "V+"
 		(shape input)
 		(at 83.185 59.69 180)
 		(fields_autoplaced yes)
@@ -3886,7 +3886,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 104.775 114.935 270)
+		(at 101.6 114.935 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3894,7 +3894,7 @@
 		(dnp no)
 		(uuid "7f48632d-97aa-4ad3-91fd-8f80bb6db895")
 		(property "Reference" "C2"
-			(at 104.775 108.5342 90)
+			(at 101.6 108.5342 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3902,7 +3902,7 @@
 			)
 		)
 		(property "Value" "100nF"
-			(at 104.775 110.8456 90)
+			(at 101.6 110.8456 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3910,7 +3910,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
-			(at 100.965 115.9002 0)
+			(at 97.79 115.9002 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3919,7 +3919,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 104.775 114.935 0)
+			(at 101.6 114.935 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3928,7 +3928,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 104.775 114.935 0)
+			(at 101.6 114.935 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3937,7 +3937,7 @@
 			)
 		)
 		(property "LCSC" "C49678"
-			(at 104.775 114.935 0)
+			(at 101.6 114.935 0)
 			(effects
 				(font
 					(size 1.27 1.27)
