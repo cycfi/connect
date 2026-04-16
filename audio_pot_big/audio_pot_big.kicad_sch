@@ -1670,7 +1670,7 @@
 	)
 	(text "Power Conditioning"
 		(exclude_from_sim no)
-		(at 142.24 36.83 0)
+		(at 142.24 37.465 0)
 		(effects
 			(font
 				(size 1.5 1.5)
@@ -1726,7 +1726,7 @@
 	)
 	(text "Main Connector"
 		(exclude_from_sim no)
-		(at 67.183 37.592 0)
+		(at 67.31 37.465 0)
 		(effects
 			(font
 				(size 1.5 1.5)
@@ -1739,7 +1739,7 @@
 	)
 	(text "Audio Buffer"
 		(exclude_from_sim no)
-		(at 67.31 86.36 0)
+		(at 67.31 86.995 0)
 		(effects
 			(font
 				(size 1.5 1.5)
@@ -1860,7 +1860,7 @@
 	)
 	(wire
 		(pts
-			(xy 83.185 94.615) (xy 83.185 111.125)
+			(xy 88.265 94.615) (xy 88.265 111.125)
 		)
 		(stroke
 			(width 0)
@@ -1990,7 +1990,7 @@
 	)
 	(wire
 		(pts
-			(xy 79.375 94.615) (xy 83.185 94.615)
+			(xy 84.455 94.615) (xy 88.265 94.615)
 		)
 		(stroke
 			(width 0)
@@ -2010,7 +2010,7 @@
 	)
 	(wire
 		(pts
-			(xy 83.185 118.745) (xy 83.185 139.065)
+			(xy 88.265 118.745) (xy 88.265 139.065)
 		)
 		(stroke
 			(width 0)
@@ -2250,7 +2250,7 @@
 	)
 	(wire
 		(pts
-			(xy 86.995 114.935) (xy 100.965 114.935)
+			(xy 92.075 114.935) (xy 100.965 114.935)
 		)
 		(stroke
 			(width 0)
@@ -2288,18 +2288,8 @@
 		)
 		(uuid "c088045b-f009-4deb-996c-b61f26dfbe69")
 	)
-	(label "pot_wiper"
-		(at 90.17 114.935 0)
-		(effects
-			(font
-				(size 1.524 1.524)
-			)
-			(justify left bottom)
-		)
-		(uuid "c9e3dc39-cc66-49ff-ad93-6ce10707c987")
-	)
 	(label "OP_OUT"
-		(at 148.59 117.475 0)
+		(at 142.875 117.475 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2320,7 +2310,7 @@
 	)
 	(global_label "in+"
 		(shape input)
-		(at 79.375 94.615 180)
+		(at 84.455 94.615 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2330,7 +2320,7 @@
 		)
 		(uuid "0df994d9-2440-4891-899c-64e0aa463af3")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 73.7178 94.615 0)
+			(at 78.7978 94.615 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3623,7 +3613,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 83.185 139.065 0)
+		(at 88.265 139.065 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3632,7 +3622,7 @@
 		(fields_autoplaced yes)
 		(uuid "6b133df8-db6f-41c8-bb3e-41890a6687ea")
 		(property "Reference" "#PWR02"
-			(at 83.185 145.415 0)
+			(at 88.265 145.415 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3641,7 +3631,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 83.185 143.5084 0)
+			(at 88.265 143.5084 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3649,7 +3639,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 83.185 139.065 0)
+			(at 88.265 139.065 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3658,7 +3648,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 83.185 139.065 0)
+			(at 88.265 139.065 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3667,7 +3657,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 83.185 139.065 0)
+			(at 88.265 139.065 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4050,7 +4040,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Potentiometer")
-		(at 83.185 114.935 0)
+		(at 88.265 114.935 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4059,7 +4049,7 @@
 		(fields_autoplaced yes)
 		(uuid "9763309a-c9ed-492f-a4a9-0b6f407725b0")
 		(property "Reference" "RV1"
-			(at 81.4071 114.1003 0)
+			(at 86.4871 114.1003 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4068,7 +4058,7 @@
 			)
 		)
 		(property "Value" "500k"
-			(at 81.4071 116.6372 0)
+			(at 86.4871 116.6372 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4077,7 +4067,7 @@
 			)
 		)
 		(property "Footprint" "cycfi_library:bourns_pdb241"
-			(at 83.185 114.935 0)
+			(at 88.265 114.935 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4086,7 +4076,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 83.185 114.935 0)
+			(at 88.265 114.935 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4095,7 +4085,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 83.185 114.935 0)
+			(at 88.265 114.935 0)
 			(effects
 				(font
 					(size 1.27 1.27)
