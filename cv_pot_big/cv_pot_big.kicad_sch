@@ -3271,7 +3271,7 @@
 		(at 92.71 115.57 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -3547,6 +3547,15 @@
 				(hide yes)
 			)
 		)
+		(property "JLCPCB_CORRECTION" "0;0;180"
+			(at 111.76 49.53 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "5d7a66f1-4171-424d-a046-97cdb08a8363")
 		)
@@ -3570,7 +3579,7 @@
 		(at 199.39 121.92 90)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "bbeff794-ca6d-4e4a-ac80-c69c780af677")
@@ -3633,7 +3642,7 @@
 		(at 199.39 128.27 90)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "c20c34dc-0c8a-47c9-82f1-fe8a3533aa64")
@@ -3810,6 +3819,24 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C5242196"
+			(at 207.01 104.14 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB_CORRECTION" "0;0;90"
+			(at 207.01 104.14 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "e20dcc28-7b72-4643-8408-cff9a57de0be")
 		)
@@ -3963,6 +3990,15 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB_CORRECTION" "0;0;180"
+			(at 142.24 118.11 0)
+			(effects
+				(font
+					(size 1.524 1.524)
 				)
 				(hide yes)
 			)
