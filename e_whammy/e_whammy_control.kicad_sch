@@ -1288,27 +1288,51 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Reference_Voltage:MCP1501-10xCH"
+		(symbol "Reference_Voltage:REF3025"
+			(pin_names
+				(offset 0.254)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
 			(property "Reference" "U"
-				(at -6.35 6.35 0)
+				(at 0 6.35 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
 				)
 			)
-			(property "Value" "MCP1501-10xCH"
-				(at 10.16 6.35 0)
+			(property "Value" "REF3025"
+				(at 2.54 -6.35 0)
 				(effects
 					(font
 						(size 1.27 1.27)
+						(italic yes)
 					)
 				)
 			)
-			(property "Footprint" "Package_TO_SOT_SMD:SOT-23-6"
+			(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+				(at 0 -11.43 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "http://www.ti.com/lit/ds/symlink/ref3033.pdf"
+				(at 2.54 -8.89 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "2.500V 50-ppm/°C Max, 50-μA, CMOS Voltage Reference, SOT-23-3"
 				(at 0 0 0)
 				(effects
 					(font
@@ -1317,25 +1341,7 @@
 					(hide yes)
 				)
 			)
-			(property "Datasheet" "http://ww1.microchip.com/downloads/en/DeviceDoc/20005474E.pdf"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "1.024V, 0.1%, 20mA, Precision Voltage Reference, SOT-23-6"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "precision buffered voltage reference 1.024V"
+			(property "ki_keywords" "voltage reference"
 				(at 0 0 0)
 				(effects
 					(font
@@ -1353,18 +1359,67 @@
 					(hide yes)
 				)
 			)
-			(symbol "MCP1501-10xCH_0_0"
-				(pin input line
-					(at -10.16 0 0)
+			(symbol "REF3025_0_1"
+				(rectangle
+					(start -5.08 5.08)
+					(end 5.08 -5.08)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.889 -0.635) (xy 0.381 -0.635) (xy -0.254 0.635) (xy -0.889 -0.635)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.254 1.905) (xy -0.254 -1.905)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.381 1.016) (xy 0.381 0.635) (xy -0.889 0.635) (xy -0.889 0.254)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "REF3025_1_1"
+				(pin power_in line
+					(at -2.54 7.62 270)
 					(length 2.54)
-					(name "~{SHDN}"
+					(name "IN"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "4"
+					(number "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1373,45 +1428,8 @@
 					)
 				)
 				(pin power_in line
-					(at 0 7.62 270)
+					(at -2.54 -7.62 90)
 					(length 2.54)
-					(name "VDD"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 0 -7.62 90)
-					(length 2.54)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -7.62 90)
-					(length 2.54)
-					(hide yes)
 					(name "GND"
 						(effects
 							(font
@@ -1427,27 +1445,8 @@
 						)
 					)
 				)
-				(pin passive line
-					(at 0 -7.62 90)
-					(length 2.54)
-					(hide yes)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
 				(pin power_out line
-					(at 10.16 0 180)
+					(at 7.62 0 180)
 					(length 2.54)
 					(name "OUT"
 						(effects
@@ -1456,25 +1455,12 @@
 							)
 						)
 					)
-					(number "1"
+					(number "2"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
-					)
-				)
-			)
-			(symbol "MCP1501-10xCH_0_1"
-				(rectangle
-					(start -7.62 5.08)
-					(end 7.62 -5.08)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
 					)
 				)
 			)
@@ -2599,6 +2585,12 @@
 		(uuid "013a8a82-47bd-4bf0-b3ff-a3cdfc7ae98a")
 	)
 	(junction
+		(at 35.56 117.475)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0398ad47-6976-48bc-92ae-22de1f390654")
+	)
+	(junction
 		(at 93.98 120.65)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2651,12 +2643,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "7cbae313-ac97-4d0c-bb45-ae6727fb70e6")
-	)
-	(junction
-		(at 35.56 117.475)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "8581f257-d20f-41ad-810d-26de67a468fa")
 	)
 	(junction
 		(at 59.69 99.06)
@@ -2729,6 +2715,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "d5074344-5b49-4c05-83f7-ecd855855ed0")
+	)
+	(junction
+		(at 35.56 139.065)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e69b5f6a-3e45-455f-9bfe-9a33f5c5a3fb")
 	)
 	(junction
 		(at 93.98 87.63)
@@ -2832,16 +2824,6 @@
 	)
 	(wire
 		(pts
-			(xy 25.4 129.54) (xy 22.225 129.54)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "118ff2c4-db93-40f6-8029-4ba4e9051127")
-	)
-	(wire
-		(pts
 			(xy 67.31 110.49) (xy 71.12 110.49)
 		)
 		(stroke
@@ -2879,6 +2861,16 @@
 			(type default)
 		)
 		(uuid "1648a0c0-3adf-415a-87c3-0b7ab05ad70b")
+	)
+	(wire
+		(pts
+			(xy 35.56 139.065) (xy 35.56 140.335)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "175f7941-d5e7-457a-84b3-833caed46df3")
 	)
 	(wire
 		(pts
@@ -2932,6 +2924,16 @@
 	)
 	(wire
 		(pts
+			(xy 29.21 139.065) (xy 35.56 139.065)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2412799b-2b3b-43cf-8d23-fb2ecf677f86")
+	)
+	(wire
+		(pts
 			(xy 203.835 114.3) (xy 200.66 114.3)
 		)
 		(stroke
@@ -2949,6 +2951,16 @@
 			(type default)
 		)
 		(uuid "2c25b4f9-b1cd-4749-8afe-28c80d046366")
+	)
+	(wire
+		(pts
+			(xy 29.21 130.81) (xy 29.21 139.065)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2c553aed-c1db-473a-aaca-f9218f2890cc")
 	)
 	(wire
 		(pts
@@ -3372,16 +3384,6 @@
 	)
 	(wire
 		(pts
-			(xy 22.225 129.54) (xy 22.225 117.475)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9a7f20cd-5113-40db-885b-fa98dff312e8")
-	)
-	(wire
-		(pts
 			(xy 95.25 116.84) (xy 93.98 116.84)
 		)
 		(stroke
@@ -3402,7 +3404,7 @@
 	)
 	(wire
 		(pts
-			(xy 35.56 137.16) (xy 35.56 140.335)
+			(xy 35.56 137.16) (xy 35.56 139.065)
 		)
 		(stroke
 			(width 0)
@@ -3449,16 +3451,6 @@
 			(type default)
 		)
 		(uuid "a49a9e1a-f818-485e-9253-cb0f6fe1092e")
-	)
-	(wire
-		(pts
-			(xy 22.225 117.475) (xy 35.56 117.475)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a948d578-6f40-489f-8ccb-2f6b723113d5")
 	)
 	(wire
 		(pts
@@ -3592,6 +3584,16 @@
 	)
 	(wire
 		(pts
+			(xy 29.21 117.475) (xy 35.56 117.475)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c4c50b99-8de5-4966-9e47-655ca6f8a6f0")
+	)
+	(wire
+		(pts
 			(xy 34.29 87.63) (xy 38.1 87.63)
 		)
 		(stroke
@@ -3719,6 +3721,16 @@
 			(type default)
 		)
 		(uuid "ec4a89cd-0c99-4c10-b857-a2cda3452d41")
+	)
+	(wire
+		(pts
+			(xy 29.21 125.73) (xy 29.21 117.475)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f054131b-e7b3-470c-9431-f57490087e4b")
 	)
 	(wire
 		(pts
@@ -4624,7 +4636,7 @@
 				)
 			)
 		)
-		(property "Value" "ADG779"
+		(property "Value" "TPADG779BKSZ"
 			(at 100.33 130.81 0)
 			(effects
 				(font
@@ -6036,7 +6048,7 @@
 		(at 204.47 66.04 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "a99f7f93-40f5-47cc-8d72-7697e2564d9e")
@@ -6872,7 +6884,7 @@
 		(at 207.01 104.14 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "c91c1a48-4cde-4827-8a63-68082a7d428c")
@@ -7365,7 +7377,7 @@
 		(lib_id "Connector:TestPoint")
 		(at 59.69 87.63 0)
 		(unit 1)
-		(exclude_from_sim no)
+		(exclude_from_sim yes)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
@@ -7445,8 +7457,8 @@
 				)
 			)
 		)
-		(property "Value" "ADG779"
-			(at 234.315 64.77 0)
+		(property "Value" "TPADG779BKSZ"
+			(at 236.855 64.77 0)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -7794,41 +7806,35 @@
 		)
 	)
 	(symbol
-		(lib_id "Reference_Voltage:MCP1501-10xCH")
-		(at 35.56 129.54 0)
+		(lib_id "Device:C_Small")
+		(at 29.21 128.27 0)
+		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "f393b29b-cfcb-4d03-b768-925a864be973")
-		(property "Reference" "U1"
-			(at 45.72 135.89 0)
+		(uuid "f0aba001-5fcf-4bb4-b533-14a1e2b5b287")
+		(property "Reference" "C10"
+			(at 26.67 126.9935 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify right)
 			)
 		)
-		(property "Value" "MCP1501T-25E/CHY"
-			(at 45.72 138.43 0)
+		(property "Value" "100nF"
+			(at 26.67 129.5335 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify right)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-6"
-			(at 35.56 129.54 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "http://ww1.microchip.com/downloads/en/DeviceDoc/20005474E.pdf"
-			(at 35.56 129.54 0)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 29.21 128.27 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7836,8 +7842,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "1.024V, 0.1%, 20mA, Precision Voltage Reference, SOT-23-6"
-			(at 35.56 129.54 0)
+		(property "Datasheet" "~"
+			(at 29.21 128.27 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7845,46 +7851,127 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C625319"
-			(at 35.56 129.54 0)
+		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 29.21 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C307331"
+			(at 29.21 128.27 0)
 			(effects
 				(font
 					(size 1.524 1.524)
 				)
 				(hide yes)
 			)
-		)
-		(property "JLCPCB_CORRECTION" "0;0;270"
-			(at 35.56 129.54 0)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-				(hide yes)
-			)
-		)
-		(pin "4"
-			(uuid "6a9d5be7-73ab-4f9a-a310-4286fc340977")
 		)
 		(pin "1"
-			(uuid "ba8bcc07-af28-48eb-b929-45f78885a5d8")
-		)
-		(pin "5"
-			(uuid "7b93f441-17cd-40e9-b2ab-0becee27e5c8")
-		)
-		(pin "3"
-			(uuid "c8dcb17a-f884-44ad-8fcc-8e9e0b043b62")
+			(uuid "fce8baea-76a3-4c78-8dc8-58e6a2d929d0")
 		)
 		(pin "2"
-			(uuid "ac967472-9378-4b76-b7e2-d389ec4bffd9")
+			(uuid "4733df39-0b5e-432b-b3ee-9b01f4b37279")
 		)
-		(pin "6"
-			(uuid "ab368177-ca86-4d97-99a8-8df165636afb")
+		(instances
+			(project "e_whammy_control"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+					(reference "C10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Reference_Voltage:REF3025")
+		(at 38.1 129.54 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "f9f24a38-591a-4c01-b522-c259fe23580b")
+		(property "Reference" "U6"
+			(at 47.625 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "REF3025"
+			(at 47.625 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 38.1 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/ref3033.pdf"
+			(at 40.64 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "2.500V 50-ppm/°C Max, 50-μA, CMOS Voltage Reference, SOT-23-3"
+			(at 38.1 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C11334"
+			(at 38.1 129.54 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB_CORRECTION" "0;0;180"
+			(at 38.1 129.54 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "227c7e8c-f95a-442a-ab7e-e0dedd9b75ab")
+		)
+		(pin "3"
+			(uuid "c228d893-7709-47bb-b983-8e558990e823")
+		)
+		(pin "2"
+			(uuid "083d06cb-a934-4db4-bf47-a3534ca63bba")
 		)
 		(instances
 			(project ""
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-					(reference "U1")
+					(reference "U6")
 					(unit 1)
 				)
 			)
