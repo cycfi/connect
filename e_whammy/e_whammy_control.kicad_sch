@@ -289,6 +289,113 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Connector:TestPoint"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.762)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "TP"
+				(at 0 6.858 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "TestPoint"
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 5.08 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 5.08 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "test point"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "test point tp"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Pin* Test*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "TestPoint_0_1"
+				(circle
+					(center 0 3.302)
+					(radius 0.762)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "TestPoint_1_1"
+				(pin passive line
+					(at 0 0 90)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Connector_Generic:Conn_01x03"
 			(pin_names
 				(offset 1.016)
@@ -2510,6 +2617,12 @@
 		(uuid "3ce01ef4-1870-47ba-b763-a0d2e40fb42e")
 	)
 	(junction
+		(at 207.01 104.14)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "43009214-3883-40e2-b8fa-a83852883ca0")
+	)
+	(junction
 		(at 93.98 104.14)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2598,6 +2711,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "c2aeaad2-b6bc-43df-ac14-cff71ddb25f8")
+	)
+	(junction
+		(at 204.47 66.04)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c553671d-775d-488d-a6ea-72dae03a6789")
 	)
 	(junction
 		(at 244.475 114.3)
@@ -2803,7 +2922,7 @@
 	)
 	(wire
 		(pts
-			(xy 199.39 66.04) (xy 216.535 66.04)
+			(xy 199.39 66.04) (xy 204.47 66.04)
 		)
 		(stroke
 			(width 0)
@@ -2860,6 +2979,16 @@
 			(type default)
 		)
 		(uuid "2f8e98e1-3280-4091-b180-d93067823972")
+	)
+	(wire
+		(pts
+			(xy 207.01 104.14) (xy 210.185 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "30cced15-9e6b-46e5-9a08-0bd12348d329")
 	)
 	(wire
 		(pts
@@ -3050,6 +3179,16 @@
 			(type default)
 		)
 		(uuid "60c40498-6bc0-428a-a5c2-eddc033c393e")
+	)
+	(wire
+		(pts
+			(xy 204.47 66.04) (xy 216.535 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "632a689a-03b1-4bd6-83bc-491e11d3ce6b")
 	)
 	(wire
 		(pts
@@ -3553,7 +3692,7 @@
 	)
 	(wire
 		(pts
-			(xy 203.835 104.14) (xy 210.185 104.14)
+			(xy 203.835 104.14) (xy 207.01 104.14)
 		)
 		(stroke
 			(width 0)
@@ -4243,6 +4382,15 @@
 				(hide yes)
 			)
 		)
+		(property "JLCPCB_CORRECTION" "0;0;270"
+			(at 193.04 114.3 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(hide yes)
+			)
+		)
 		(pin "6"
 			(uuid "9441d5f4-c748-42e0-acb2-113f26b04136")
 		)
@@ -4373,7 +4521,7 @@
 				)
 			)
 		)
-		(property "Value" "LM393PWR"
+		(property "Value" "LM393BIDGKR"
 			(at 187.96 58.42 0)
 			(effects
 				(font
@@ -4381,7 +4529,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_SO:TSSOP-8_3x3mm_P0.65mm"
+		(property "Footprint" "Package_SO:VSSOP-8_3x3mm_P0.65mm"
 			(at 187.96 66.04 0)
 			(effects
 				(font
@@ -4408,7 +4556,16 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C7956"
+		(property "LCSC" "C3659248"
+			(at 187.96 66.04 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB_CORRECTION" "0;0;270"
 			(at 187.96 66.04 0)
 			(effects
 				(font
@@ -4505,6 +4662,15 @@
 			)
 		)
 		(property "LCSC" "C42449021"
+			(at 93.98 129.54 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB_CORRECTION" "0;0;270"
 			(at 93.98 129.54 0)
 			(effects
 				(font
@@ -4922,7 +5088,7 @@
 				)
 			)
 		)
-		(property "Value" "LM393PWR"
+		(property "Value" "LM393BIDGKR"
 			(at 187.96 41.91 0)
 			(effects
 				(font
@@ -4930,7 +5096,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_SO:TSSOP-8_3x3mm_P0.65mm"
+		(property "Footprint" "Package_SO:VSSOP-8_3x3mm_P0.65mm"
 			(at 187.96 49.53 0)
 			(effects
 				(font
@@ -4957,7 +5123,16 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C7956"
+		(property "LCSC" "C3659248"
+			(at 187.96 49.53 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB_CORRECTION" "0;0;270"
 			(at 187.96 49.53 0)
 			(effects
 				(font
@@ -5090,6 +5265,15 @@
 			)
 		)
 		(property "LCSC" "C398361"
+			(at 73.66 118.11 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB_CORRECTION" "0;0;270"
 			(at 73.66 118.11 0)
 			(effects
 				(font
@@ -5842,6 +6026,73 @@
 			(project "e_whammy_control"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
 					(reference "#PWR08")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 204.47 66.04 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a99f7f93-40f5-47cc-8d72-7697e2564d9e")
+		(property "Reference" "TP1"
+			(at 203.2 60.325 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 207.01 64.0079 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "cycfi_library:single-pad-1.2x1.2"
+			(at 209.55 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 209.55 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 204.47 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e206a7e9-b113-4b36-a7f8-a21a3181cb39")
+		)
+		(instances
+			(project ""
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+					(reference "TP1")
 					(unit 1)
 				)
 			)
@@ -6617,6 +6868,73 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 207.01 104.14 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c91c1a48-4cde-4827-8a63-68082a7d428c")
+		(property "Reference" "TP2"
+			(at 205.74 98.425 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 209.55 102.1079 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "cycfi_library:single-pad-1.2x1.2"
+			(at 212.09 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 212.09 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 207.01 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ff6fd2c7-a98c-4f90-950d-f440005410ad")
+		)
+		(instances
+			(project "e_whammy_control"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+					(reference "TP2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 66.04 39.37 0)
 		(unit 1)
@@ -7001,6 +7319,15 @@
 				(hide yes)
 			)
 		)
+		(property "JLCPCB_CORRECTION" "0;0;270"
+			(at 233.68 114.3 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(hide yes)
+			)
+		)
 		(pin "6"
 			(uuid "9441d5f4-c748-42e0-acb2-113f26b04138")
 		)
@@ -7030,6 +7357,73 @@
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
 					(reference "U3")
 					(unit 2)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 59.69 87.63 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "d8213bc6-52b2-4e00-944c-32834b8bd25e")
+		(property "Reference" "TP3"
+			(at 58.42 81.915 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 62.23 85.5979 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "cycfi_library:single-pad-1.2x1.2"
+			(at 64.77 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 64.77 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 59.69 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "70110f48-8c85-4429-91c5-a180907581dc")
+		)
+		(instances
+			(project "e_whammy_control"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+					(reference "TP3")
+					(unit 1)
 				)
 			)
 		)
@@ -7089,6 +7483,15 @@
 			)
 		)
 		(property "LCSC" "C42449021"
+			(at 227.965 60.96 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB_CORRECTION" "0;0;270"
 			(at 227.965 60.96 0)
 			(effects
 				(font
@@ -7208,7 +7611,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "LM393PWR"
+		(property "Value" "LM393BIDGKR"
 			(at 96.52 91.44 0)
 			(effects
 				(font
@@ -7217,7 +7620,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_SO:TSSOP-8_3x3mm_P0.65mm"
+		(property "Footprint" "Package_SO:VSSOP-8_3x3mm_P0.65mm"
 			(at 96.52 96.52 0)
 			(effects
 				(font
@@ -7244,7 +7647,16 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C7956"
+		(property "LCSC" "C3659248"
+			(at 96.52 96.52 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB_CORRECTION" "0;0;270"
 			(at 96.52 96.52 0)
 			(effects
 				(font
@@ -7429,6 +7841,24 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C625319"
+			(at 35.56 129.54 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB_CORRECTION" "0;0;270"
+			(at 35.56 129.54 0)
+			(effects
+				(font
+					(size 1.524 1.524)
 				)
 				(hide yes)
 			)
