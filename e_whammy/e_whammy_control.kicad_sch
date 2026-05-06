@@ -6600,7 +6600,7 @@
 				)
 			)
 		)
-		(property "Value" "10M"
+		(property "Value" "1M"
 			(at 193.675 91.44 90)
 			(effects
 				(font
