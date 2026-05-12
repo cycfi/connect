@@ -4,7 +4,7 @@
     {
       "analysis": "TRAN",
       "commands": [
-        ".tran 1m 6",
+        ".tran 1m 6.5",
         ".kicad adjustpaths",
         ".save all",
         ".probe alli",
@@ -22,31 +22,12 @@
       "traces": [
         {
           "color": "rgb(55, 126, 184)",
-          "cursor1": {
-            "position": 1.1305201177625124,
-            "x_format": "3~s",
-            "y_format": "3~V"
-          },
-          "cursor2": {
-            "position": 3.150147203140334,
-            "x_format": "3~s",
-            "y_format": "3~V"
-          },
-          "cursorD": {
-            "x_format": "3~s",
-            "y_format": "3~V"
-          },
           "signal": "V(OUT)",
           "trace_type": 257
         },
         {
           "color": "rgb(228, 26, 28)",
           "signal": "V(SENSOR)",
-          "trace_type": 257
-        },
-        {
-          "color": "rgb(152, 78, 163)",
-          "signal": "V(VREF)",
           "trace_type": 257
         }
       ]
