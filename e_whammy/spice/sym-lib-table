@@ -1,0 +1,5 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "cycfi_library")(type "KiCad")(uri "${KIPRJMOD}/../../pcb_common/kicad/cycfi_library.kicad_sym")(options "")(descr ""))
+  (lib (name "cycfi_spice_library")(type "KiCad")(uri "${KIPRJMOD}/../../pcb_common/kicad/cycfi_spice_library.kicad_sym")(options "")(descr ""))
+)

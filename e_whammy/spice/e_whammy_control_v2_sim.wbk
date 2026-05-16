@@ -4,7 +4,7 @@
     {
       "analysis": "TRAN",
       "commands": [
-        ".tran 2m 5 30m 10u uic",
+        ".tran 2m 7 0 2m",
         ".kicad adjustpaths",
         ".save all",
         ".probe alli",
@@ -21,14 +21,14 @@
       "showGrid": true,
       "traces": [
         {
-          "color": "rgb(228, 26, 28)",
+          "color": "rgb(55, 126, 184)",
+          "signal": "V(OUT)",
+          "trace_type": 257
+        },
+        {
+          "color": "rgb(152, 78, 163)",
           "cursor1": {
-            "position": 4.034288518155054,
-            "x_format": "3~s",
-            "y_format": "3~V"
-          },
-          "cursor2": {
-            "position": 4.136712463199215,
+            "position": 2.3455178416013927,
             "x_format": "3~s",
             "y_format": "3~V"
           },
@@ -36,17 +36,7 @@
             "x_format": "3~s",
             "y_format": "3~V"
           },
-          "signal": "V(OUT)",
-          "trace_type": 257
-        },
-        {
-          "color": "rgb(55, 126, 184)",
           "signal": "V(SENSOR)",
-          "trace_type": 257
-        },
-        {
-          "color": "rgb(166, 86, 40)",
-          "signal": "V(VREF)",
           "trace_type": 257
         }
       ]

@@ -1763,7 +1763,7 @@
 		)
 		(uuid "0be3acd9-17b4-4bdc-9b86-183a6a7fb292")
 	)
-	(text "A simplified raw Hall sensor source in the pre-gain domain, \nnot the final 5 V output domain.\n* Resting baseline is 2.175 V.\n* A large upward bend ramps to 2.425 V and holds briefly.\n* After release, the signal returns to 2.1825 V, modeling \n  a +7.5 mV spring-hysteresis center shift.\n* After a short delay, a 5 Hz vibrato of ±10 mV is applied \n  around 2.1825 V for a limited duration, then stops.\n* This model was chosen to test bend handling, return behavior, \n  hysteresis cleanup, and vibrato preservation under realistic \n  raw-sensor conditions."
+	(text "A simplified raw Hall sensor source in the pre-gain domain, \nnot the final 5 V output domain.\n* Resting baseline is 2.175 V.\n* A large upward bend ramps to 2.425 V and holds briefly.\n* After release, the signal returns to 2.1825 V, modeling \n  a +7.5 mV spring-hysteresis center shift.\n* A matching large downward bend ramps to 1.925 V, holds, \n  and returns to 2.1675 V before vibrato begins.\n* After a short delay, a 5 Hz vibrato of ±10 mV is applied \n  around 2.1675 V for a limited duration, then stops.\n* This model was chosen to test bend handling, return behavior, \n  hysteresis cleanup, and vibrato preservation under realistic \n  raw-sensor conditions."
 		(exclude_from_sim no)
 		(at 75.565 127.635 0)
 		(effects
@@ -1779,6 +1779,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "17e735d0-ef60-4f4f-a712-eeeb913e7e87")
+	)
+	(junction
+		(at 262.255 116.84)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "29fe8c5f-6308-43aa-8111-5ae0f67a4961")
 	)
 	(junction
 		(at 228.6 109.855)
@@ -1962,7 +1968,7 @@
 	)
 	(wire
 		(pts
-			(xy 241.3 116.84) (xy 252.095 116.84)
+			(xy 241.3 116.84) (xy 262.255 116.84)
 		)
 		(stroke
 			(width 0)
@@ -2112,6 +2118,16 @@
 	)
 	(wire
 		(pts
+			(xy 262.255 116.84) (xy 266.065 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "769dc4d2-264a-49b7-94f0-3b97b08dde24")
+	)
+	(wire
+		(pts
 			(xy 219.075 90.805) (xy 223.52 90.805)
 		)
 		(stroke
@@ -2239,6 +2255,16 @@
 			(type default)
 		)
 		(uuid "b6a568a3-9a4d-46c0-a1b7-484a249f052b")
+	)
+	(wire
+		(pts
+			(xy 262.255 127.635) (xy 262.255 136.525)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b95ca9f1-0d7c-437c-bdef-2ad4be0892eb")
 	)
 	(wire
 		(pts
@@ -2402,6 +2428,16 @@
 	)
 	(wire
 		(pts
+			(xy 262.255 116.84) (xy 262.255 122.555)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e675cc6b-9b7b-405f-86b7-fad18aede41b")
+	)
+	(wire
+		(pts
 			(xy 99.06 38.735) (xy 99.06 45.085)
 		)
 		(stroke
@@ -2552,7 +2588,7 @@
 	)
 	(global_label "SW2"
 		(shape input)
-		(at 252.095 116.84 0)
+		(at 266.065 116.84 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2562,7 +2598,7 @@
 		)
 		(uuid "34026ac6-e264-45b0-8295-722ae87b7ee6")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 258.9506 116.84 0)
+			(at 272.9206 116.84 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3032,7 +3068,7 @@
 				(hide yes)
 			)
 		)
-		(property "Sim.Params" "type=\"B\" model=\"V=if(time<0.20,2.175*(time/0.20),if(time<0.35,2.175,if(time<0.45,2.175+(2.275-2.175)*(time-0.35)/0.10,if(time<0.55,2.275-(2.275-2.025)*(time-0.45)/0.10,if(time<0.65,2.025+(2.175-2.025)*(time-0.55)/0.10,if(time<2.00,2.175,if(time<2.25,2.175+(2.425-2.175)*(time-2.00)/0.25,if(time<3.00,2.425,if(time<3.25,2.425-((2.425-2.1825)*(time-3.00)/0.25),if(time<3.90,2.1825,if(time<4.90,2.1825+0.01*sin(2*pi*5*(time-3.90)),2.1825)))))))))))\""
+		(property "Sim.Params" "type=\"B\" model=\"V=if(time<0.20,2.175*(time/0.20),if(time<0.35,2.175,if(time<0.45,2.175+(2.275-2.175)*(time-0.35)/0.10,if(time<0.55,2.275-(2.275-2.025)*(time-0.45)/0.10,if(time<0.65,2.025+(2.175-2.025)*(time-0.55)/0.10,if(time<2.00,2.175,if(time<2.25,2.175+(2.425-2.175)*(time-2.00)/0.25,if(time<3.00,2.425,if(time<3.25,2.425-((2.425-2.1825)*(time-3.00)/0.25),if(time<3.50,2.1825,if(time<3.75,2.1825-((2.1825-1.925)*(time-3.50)/0.25),if(time<4.50,1.925,if(time<4.75,1.925+((2.1675-1.925)*(time-4.50)/0.25),if(time<5.40,2.1675,if(time<6.40,2.1675+0.01*sin(2*pi*5*(time-5.40)),2.1675)))))))))))))))\""
 			(at 64.135 128.2699 0)
 			(effects
 				(font
@@ -3122,6 +3158,76 @@
 			(project "e_whammy_control_v2b"
 				(path "/a157ea51-2828-471e-af10-4598cb486db8"
 					(reference "R5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 262.255 125.095 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "4a7f7fcd-5713-487c-a7d6-986a40ccc728")
+		(property "Reference" "C5"
+			(at 265.43 123.8185 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "100nF"
+			(at 265.43 126.3585 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 262.255 125.095 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 262.255 125.095 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 262.255 125.095 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "264315ef-1b24-4e34-8956-453d7796f57c")
+		)
+		(pin "2"
+			(uuid "b41d1f97-767d-4c74-b85b-bc63024d7992")
+		)
+		(instances
+			(project "e_whammy_control_v2b"
+				(path "/a157ea51-2828-471e-af10-4598cb486db8"
+					(reference "C5")
 					(unit 1)
 				)
 			)
@@ -4292,6 +4398,72 @@
 			(project "e_whammy_control_v2b"
 				(path "/a157ea51-2828-471e-af10-4598cb486db8"
 					(reference "R3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Simulation_SPICE:0")
+		(at 262.255 136.525 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d2f81585-fb09-40b1-b9f1-0fd45053f1f5")
+		(property "Reference" "#GND010"
+			(at 262.255 141.605 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "0"
+			(at 262.255 133.985 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 262.255 136.525 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#subsec_Circuit_elements__device"
+			(at 262.255 146.685 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "0V reference potential for simulation"
+			(at 262.255 144.145 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "93729597-8dbd-49bf-8a80-abd00f2d10b3")
+		)
+		(instances
+			(project "e_whammy_control_v2b"
+				(path "/a157ea51-2828-471e-af10-4598cb486db8"
+					(reference "#GND010")
 					(unit 1)
 				)
 			)

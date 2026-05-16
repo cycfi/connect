@@ -22,12 +22,31 @@
       "traces": [
         {
           "color": "rgb(55, 126, 184)",
+          "cursor1": {
+            "position": 4.05047867711053,
+            "x_format": "3~s",
+            "y_format": "3~V"
+          },
+          "cursor2": {
+            "position": 3.9486510008703215,
+            "x_format": "3~s",
+            "y_format": "3~V"
+          },
+          "cursorD": {
+            "x_format": "3~s",
+            "y_format": "3~V"
+          },
           "signal": "V(OUT)",
           "trace_type": 257
         },
         {
           "color": "rgb(228, 26, 28)",
           "signal": "V(SENSOR)",
+          "trace_type": 257
+        },
+        {
+          "color": "rgb(77, 175, 74)",
+          "signal": "V(SW2)",
           "trace_type": 257
         }
       ]
