@@ -2383,8 +2383,8 @@
 		(uuid c830e794-b09b-4dfc-bfd2-89b14fecd30c)
 	)
 	(rectangle
-		(start 23.495 129.54)
-		(end 127.635 172.72)
+		(start 23.495 135.255)
+		(end 127.635 168.91)
 		(stroke
 			(width 0)
 			(type default)
@@ -2415,9 +2415,9 @@
 		)
 		(uuid "592c1039-1566-486b-a2b9-0aa590bd889b")
 	)
-	(text "A simplified raw Hall sensor source in the pre-gain domain, \nnot the final 5 V output domain.\n* Resting baseline is 2.175 V.\n* A large upward bend ramps to 2.425 V and holds briefly.\n* After release, the signal returns to 2.1825 V, modeling \n  a +7.5 mV spring-hysteresis center shift.\n* A matching large downward bend ramps to 1.925 V, holds, \n  and returns to 2.1675 V.\n* Pitch range is now treated as ±12 semitones, so one semitone \n  is 20.8333 mV in the raw SENSOR domain.\n* A +1 semitone raw-sensor test lasts 1 s total: 100 ms ramp up, \n  800 ms hold, then 100 ms ramp back to center.\n* After 1 s at center, a -1 semitone raw-sensor test lasts 1 s total: \n  100 ms ramp down, 800 ms hold, then 100 ms ramp back to center.\n* After another 1 s at center, a 5 Hz vibrato of ±10 mV is applied \n  around 2.1675 V for a limited duration, then stops.\n* This model was chosen to test bend handling, return behavior, \n  hysteresis cleanup, intentional one-semitone holds, and vibrato \n  preservation under realistic raw-sensor conditions."
+	(text "Raw Hall SENSOR model, before final 5 V output scaling.\n* Center is 2.175 V.\n* Startup includes deliberate small motion during reset acquisition.\n* Large up bend: 2.175 V -> 2.425 V, then releases to 2.1825 V\n  to model +7.5 mV spring hysteresis.\n* Large down bend: 2.1825 V -> 1.925 V, then releases to 2.1675 V\n  to model the opposite hysteresis direction.\n* Pitch range is ±12 semitones: 1 semitone = 20.8333 mV at SENSOR.\n* Then test +1 semitone hold, center, -1 semitone hold, center.\n  Each semitone test is 100 ms ramp, 800 ms hold, 100 ms return.\n* Final test is 5 Hz vibrato, ±10 mV around 2.1675 V."
 		(exclude_from_sim no)
-		(at 53.34 151.13 0)
+		(at 54.61 152.4 0)
 		(effects
 			(font
 				(size 1.27 1.27)
