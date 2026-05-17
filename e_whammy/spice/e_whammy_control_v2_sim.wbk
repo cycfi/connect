@@ -21,18 +21,32 @@
       "showGrid": true,
       "traces": [
         {
+          "color": "rgb(77, 175, 74)",
+          "signal": "V(/WH)",
+          "trace_type": 257
+        },
+        {
+          "color": "rgb(152, 78, 163)",
+          "signal": "V(/WL)",
+          "trace_type": 257
+        },
+        {
           "color": "rgb(166, 86, 40)",
           "signal": "V(HOLD)",
           "trace_type": 257
         },
         {
           "color": "rgb(55, 126, 184)",
+          "cursor1": {
+            "position": 1.3707571801566583,
+            "x_format": "3~s",
+            "y_format": "3~V"
+          },
+          "cursorD": {
+            "x_format": "3~s",
+            "y_format": "3~V"
+          },
           "signal": "V(OUT)",
-          "trace_type": 257
-        },
-        {
-          "color": "rgb(255, 127, 0)",
-          "signal": "V(VREF)",
           "trace_type": 257
         }
       ]
