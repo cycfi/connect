@@ -2383,8 +2383,8 @@
 		(uuid c830e794-b09b-4dfc-bfd2-89b14fecd30c)
 	)
 	(rectangle
-		(start 23.495 135.89)
-		(end 122.555 165.735)
+		(start 23.495 129.54)
+		(end 127.635 172.72)
 		(stroke
 			(width 0)
 			(type default)
@@ -2405,7 +2405,17 @@
 		)
 		(uuid "0177f55e-e21f-4166-8160-cba236d395aa")
 	)
-	(text "A simplified raw Hall sensor source in the pre-gain domain, \nnot the final 5 V output domain.\n* Resting baseline is 2.175 V.\n* A large upward bend ramps to 2.425 V and holds briefly.\n* After release, the signal returns to 2.1825 V, modeling \n  a +7.5 mV spring-hysteresis center shift.\n* A matching large downward bend ramps to 1.925 V, holds, \n  and returns to 2.1675 V before vibrato begins.\n* After a short delay, a 5 Hz vibrato of ±10 mV is applied \n  around 2.1675 V for a limited duration, then stops.\n* This model was chosen to test bend handling, return behavior, \n  hysteresis cleanup, and vibrato preservation under realistic \n  raw-sensor conditions."
+	(text "Near center reset"
+		(exclude_from_sim no)
+		(at 167.005 100.33 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "592c1039-1566-486b-a2b9-0aa590bd889b")
+	)
+	(text "A simplified raw Hall sensor source in the pre-gain domain, \nnot the final 5 V output domain.\n* Resting baseline is 2.175 V.\n* A large upward bend ramps to 2.425 V and holds briefly.\n* After release, the signal returns to 2.1825 V, modeling \n  a +7.5 mV spring-hysteresis center shift.\n* A matching large downward bend ramps to 1.925 V, holds, \n  and returns to 2.1675 V.\n* Pitch range is now treated as ±12 semitones, so one semitone \n  is 20.8333 mV in the raw SENSOR domain.\n* A +1 semitone raw-sensor test lasts 1 s total: 100 ms ramp up, \n  800 ms hold, then 100 ms ramp back to center.\n* After 1 s at center, a -1 semitone raw-sensor test lasts 1 s total: \n  100 ms ramp down, 800 ms hold, then 100 ms ramp back to center.\n* After another 1 s at center, a 5 Hz vibrato of ±10 mV is applied \n  around 2.1675 V for a limited duration, then stops.\n* This model was chosen to test bend handling, return behavior, \n  hysteresis cleanup, intentional one-semitone holds, and vibrato \n  preservation under realistic raw-sensor conditions."
 		(exclude_from_sim no)
 		(at 53.34 151.13 0)
 		(effects
@@ -2426,6 +2436,16 @@
 			(justify left)
 		)
 		(uuid "782b481e-4e57-4b4d-9e9c-b12e96a92001")
+	)
+	(text "Startup reset"
+		(exclude_from_sim no)
+		(at 167.005 124.46 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "b0f6ad23-1e52-4004-b61d-12b98e03333a")
 	)
 	(junction
 		(at 273.685 79.375)
@@ -2456,12 +2476,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "51c47f7b-ab44-47d2-bf8a-df08f98f8261")
-	)
-	(junction
-		(at 99.06 101.6)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "56e47491-f8a1-49d9-a8bb-42d06f1beaee")
 	)
 	(junction
 		(at 217.17 97.155)
@@ -2518,13 +2532,19 @@
 		(uuid "cc145203-7e42-4882-a37d-0740930f0cc7")
 	)
 	(junction
+		(at 99.06 101.6)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "db3069ef-75a8-4345-bfb3-f21401fa750b")
+	)
+	(junction
 		(at 273.685 113.665)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "dd2599f0-15ba-4a61-8567-ae3f1e50ba4f")
 	)
 	(junction
-		(at 180.34 116.84)
+		(at 178.435 116.84)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "f21ece94-ce32-4255-ba23-49adaef9e297")
@@ -2587,7 +2607,7 @@
 	)
 	(wire
 		(pts
-			(xy 156.21 116.84) (xy 160.655 116.84)
+			(xy 154.305 116.84) (xy 158.75 116.84)
 		)
 		(stroke
 			(width 0)
@@ -2597,7 +2617,7 @@
 	)
 	(wire
 		(pts
-			(xy 180.34 114.3) (xy 180.34 116.84)
+			(xy 178.435 114.3) (xy 178.435 116.84)
 		)
 		(stroke
 			(width 0)
@@ -2617,7 +2637,7 @@
 	)
 	(wire
 		(pts
-			(xy 180.34 116.84) (xy 180.34 120.65)
+			(xy 178.435 116.84) (xy 178.435 120.65)
 		)
 		(stroke
 			(width 0)
@@ -2627,7 +2647,7 @@
 	)
 	(wire
 		(pts
-			(xy 180.34 125.73) (xy 180.34 128.27)
+			(xy 178.435 125.73) (xy 178.435 128.27)
 		)
 		(stroke
 			(width 0)
@@ -2827,7 +2847,7 @@
 	)
 	(wire
 		(pts
-			(xy 180.34 108.585) (xy 180.34 109.22)
+			(xy 178.435 108.585) (xy 178.435 109.22)
 		)
 		(stroke
 			(width 0)
@@ -3207,16 +3227,6 @@
 	)
 	(wire
 		(pts
-			(xy 99.06 101.6) (xy 99.06 108.585)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ccdcdbf9-0818-4391-89d8-e29314554f66")
-	)
-	(wire
-		(pts
 			(xy 110.49 53.34) (xy 109.22 53.34)
 		)
 		(stroke
@@ -3294,6 +3304,16 @@
 			(type default)
 		)
 		(uuid "dd0bdb73-89fe-4f94-bd13-874b45a05f3e")
+	)
+	(wire
+		(pts
+			(xy 99.06 101.6) (xy 99.06 108.585)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dde36c1a-2d6f-44e7-abc2-356228a1e650")
 	)
 	(wire
 		(pts
@@ -3437,7 +3457,7 @@
 	)
 	(wire
 		(pts
-			(xy 174.625 116.84) (xy 180.34 116.84)
+			(xy 172.72 116.84) (xy 178.435 116.84)
 		)
 		(stroke
 			(width 0)
@@ -3521,7 +3541,7 @@
 	)
 	(global_label "HOLD"
 		(shape input)
-		(at 156.21 116.84 180)
+		(at 154.305 116.84 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3531,7 +3551,7 @@
 		)
 		(uuid "3b57529e-d5ec-420c-8a41-a71435128ccc")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 148.2657 116.84 0)
+			(at 146.3607 116.84 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4495,7 +4515,7 @@
 				(hide yes)
 			)
 		)
-		(property "Sim.Params" "type=\"B\" model=\"V=if(time<0.20,2.175*(time/0.20),if(time<0.35,2.175,if(time<0.45,2.175+(2.275-2.175)*(time-0.35)/0.10,if(time<0.55,2.275-(2.275-2.025)*(time-0.45)/0.10,if(time<0.65,2.025+(2.175-2.025)*(time-0.55)/0.10,if(time<2.00,2.175,if(time<2.25,2.175+(2.425-2.175)*(time-2.00)/0.25,if(time<3.00,2.425,if(time<3.25,2.425-((2.425-2.1825)*(time-3.00)/0.25),if(time<3.50,2.1825,if(time<3.75,2.1825-((2.1825-1.925)*(time-3.50)/0.25),if(time<4.50,1.925,if(time<4.75,1.925+((2.1675-1.925)*(time-4.50)/0.25),if(time<5.40,2.1675,if(time<6.40,2.1675+0.01*sin(2*pi*5*(time-5.40)),2.1675)))))))))))))))\""
+		(property "Sim.Params" "type=\"B\" model=\"V=if(time<0.20,2.175*(time/0.20),if(time<0.35,2.175,if(time<0.45,2.175+(2.275-2.175)*(time-0.35)/0.10,if(time<0.55,2.275-(2.275-2.025)*(time-0.45)/0.10,if(time<0.65,2.025+(2.175-2.025)*(time-0.55)/0.10,if(time<2.00,2.175,if(time<2.25,2.175+(2.425-2.175)*(time-2.00)/0.25,if(time<3.00,2.425,if(time<3.25,2.425-((2.425-2.1825)*(time-3.00)/0.25),if(time<3.50,2.1825,if(time<3.75,2.1825-((2.1825-1.925)*(time-3.50)/0.25),if(time<4.50,1.925,if(time<4.75,1.925+((2.1675-1.925)*(time-4.50)/0.25),if(time<5.40,2.1675,if(time<5.50,2.1675+((2.1883333-2.1675)*(time-5.40)/0.10),if(time<6.30,2.1883333,if(time<6.40,2.1883333-((2.1883333-2.1675)*(time-6.30)/0.10),if(time<7.40,2.1675,if(time<7.50,2.1675-((2.1675-2.1466667)*(time-7.40)/0.10),if(time<8.30,2.1466667,if(time<8.40,2.1466667+((2.1675-2.1466667)*(time-8.30)/0.10),if(time<9.40,2.1675,if(time<10.40,2.1675+0.01*sin(2*pi*5*(time-9.40)),2.1675)))))))))))))))))))))))\""
 			(at 41.91 151.7649 0)
 			(effects
 				(font
@@ -4809,7 +4829,7 @@
 				(hide yes)
 			)
 		)
-		(property "Sim.Params" "y1=0 y2=5 td=1m tr=1u tf=1u tw=10 per=20"
+		(property "Sim.Params" "y1=0 y2=5 td=1m tr=1u tf=1u tw=20 per=40"
 			(at 37.465 57.6551 0)
 			(effects
 				(font
@@ -4836,7 +4856,7 @@
 	)
 	(symbol
 		(lib_id "power:+5V")
-		(at 180.34 108.585 0)
+		(at 178.435 108.585 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4845,7 +4865,7 @@
 		(fields_autoplaced yes)
 		(uuid "266fc237-ba6b-404a-9598-b1dd597a0a60")
 		(property "Reference" "#PWR031"
-			(at 180.34 112.395 0)
+			(at 178.435 112.395 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4854,7 +4874,7 @@
 			)
 		)
 		(property "Value" "+5V"
-			(at 180.34 103.505 0)
+			(at 178.435 103.505 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4862,7 +4882,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 180.34 108.585 0)
+			(at 178.435 108.585 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4871,7 +4891,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 180.34 108.585 0)
+			(at 178.435 108.585 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4880,7 +4900,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 180.34 108.585 0)
+			(at 178.435 108.585 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5327,7 +5347,7 @@
 				)
 			)
 		)
-		(property "Value" "1k"
+		(property "Value" "499R"
 			(at 92.075 119.38 0)
 			(effects
 				(font
@@ -5379,7 +5399,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 180.34 128.27 0)
+		(at 178.435 128.27 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5388,7 +5408,7 @@
 		(fields_autoplaced yes)
 		(uuid "42d79b0d-065d-497b-a72a-b21eab7cfc72")
 		(property "Reference" "#PWR029"
-			(at 180.34 134.62 0)
+			(at 178.435 134.62 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5397,7 +5417,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 180.34 133.35 0)
+			(at 178.435 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5405,7 +5425,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 180.34 128.27 0)
+			(at 178.435 128.27 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5414,7 +5434,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 180.34 128.27 0)
+			(at 178.435 128.27 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5423,7 +5443,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 180.34 128.27 0)
+			(at 178.435 128.27 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5652,7 +5672,7 @@
 	)
 	(symbol
 		(lib_id "Device:C_Small")
-		(at 180.34 111.76 0)
+		(at 178.435 111.76 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5661,7 +5681,7 @@
 		(fields_autoplaced yes)
 		(uuid "4e1f9700-53d9-487f-bd5b-61af90797b2d")
 		(property "Reference" "C2"
-			(at 183.515 110.4962 0)
+			(at 181.61 110.4962 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5670,7 +5690,7 @@
 			)
 		)
 		(property "Value" "2.2uF"
-			(at 183.515 113.0362 0)
+			(at 181.61 113.0362 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5679,7 +5699,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 180.34 111.76 0)
+			(at 178.435 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5688,7 +5708,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 180.34 111.76 0)
+			(at 178.435 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5697,7 +5717,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 180.34 111.76 0)
+			(at 178.435 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5837,7 +5857,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small")
-		(at 180.34 123.19 180)
+		(at 178.435 123.19 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5846,7 +5866,7 @@
 		(fields_autoplaced yes)
 		(uuid "60844ad1-d0db-4993-9831-7f422bea81e5")
 		(property "Reference" "R12"
-			(at 182.245 121.9199 0)
+			(at 180.34 121.9199 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5855,7 +5875,7 @@
 			)
 		)
 		(property "Value" "1M"
-			(at 182.245 124.4599 0)
+			(at 180.34 124.4599 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5864,7 +5884,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 180.34 123.19 0)
+			(at 178.435 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5873,7 +5893,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 180.34 123.19 0)
+			(at 178.435 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5882,7 +5902,7 @@
 			)
 		)
 		(property "Description" "Resistor, small symbol"
-			(at 180.34 123.19 0)
+			(at 178.435 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6680,7 +6700,7 @@
 	(symbol
 		(lib_name "OPEN_DRAIN_INVERTER_1")
 		(lib_id "cycfi_spice_library:OPEN_DRAIN_INVERTER")
-		(at 167.005 116.84 0)
+		(at 165.1 116.84 0)
 		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
@@ -6689,7 +6709,7 @@
 		(dnp no)
 		(uuid "8f1f5fa4-014d-4171-b1fd-72eb52d6fa58")
 		(property "Reference" "U7"
-			(at 168.275 111.76 0)
+			(at 166.37 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6697,7 +6717,7 @@
 			)
 		)
 		(property "Value" "OPEN_DRAIN_INVERTER"
-			(at 167.64 110.49 0)
+			(at 165.735 110.49 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6706,7 +6726,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 167.005 116.84 0)
+			(at 165.1 116.84 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6715,7 +6735,7 @@
 			)
 		)
 		(property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#sec_Non_linear_Dependent_Sources"
-			(at 167.005 116.84 0)
+			(at 165.1 116.84 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6724,7 +6744,7 @@
 			)
 		)
 		(property "Description" "Generic CMOS open-drain inverter for simulation"
-			(at 167.005 116.84 0)
+			(at 165.1 116.84 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6733,7 +6753,7 @@
 			)
 		)
 		(property "Sim.Pins" "1=input 2=output 3=vcc 4=gnd"
-			(at 167.005 116.84 0)
+			(at 165.1 116.84 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6742,7 +6762,7 @@
 			)
 		)
 		(property "Sim.Device" "SUBCKT"
-			(at 167.005 116.84 0)
+			(at 165.1 116.84 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6752,7 +6772,7 @@
 			)
 		)
 		(property "Sim.Library" "${KIPRJMOD}/../../pcb_common/kicad/cycfi_spice_library.sp"
-			(at 167.005 116.84 0)
+			(at 165.1 116.84 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6761,7 +6781,7 @@
 			)
 		)
 		(property "Sim.Name" "cycfi_open_drain_inverter"
-			(at 167.005 116.84 0)
+			(at 165.1 116.84 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6770,7 +6790,7 @@
 			)
 		)
 		(property "Sim.Params" "RON=10 ROFF=1e12 VTH=0.5"
-			(at 163.195 122.555 0)
+			(at 161.29 122.555 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7614,10 +7634,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "9f2ef889-0b59-4b2a-abe0-dc2de679f79a")
+			(uuid "9f2ef889-0b59-4b2a-abe0-dc2de679f79b")
 		)
 		(pin "2"
-			(uuid "0eb96f01-4db7-4a10-9374-50ce60202bfb")
+			(uuid "0eb96f01-4db7-4a10-9374-50ce60202bfc")
 		)
 		(pin "3"
 			(uuid "3d997ab2-8f9b-44e8-9e7e-6db630feb466")
@@ -8572,7 +8592,7 @@
 				(hide yes)
 			)
 		)
-		(property "Sim.Params" "y1=0 y2=2.5 td=1m tr=1u tf=1u tw=10 per=20"
+		(property "Sim.Params" "y1=0 y2=2.5 td=1m tr=1u tf=1u tw=20 per=40"
 			(at 37.465 95.7551 0)
 			(effects
 				(font
