@@ -2343,6 +2343,18 @@
 		)
 		(uuid "182703b6-1513-44d9-8526-658cbcaf9801")
 	)
+	(text "Forces RESET\nhigh at startup\nTC = 2.2 s"
+		(exclude_from_sim no)
+		(at 181.61 100.33 0)
+		(effects
+			(font
+				(size 1.524 1.524)
+				(thickness 0.1905)
+			)
+			(justify left)
+		)
+		(uuid "56be8efa-0a13-4fdc-942f-cd569386c082")
+	)
 	(text "DC Servo"
 		(exclude_from_sim no)
 		(at 82.55 35.56 0)
@@ -7344,7 +7356,7 @@
 				)
 			)
 		)
-		(property "Value" "250k"
+		(property "Value" "200k"
 			(at 273.685 76.835 90)
 			(effects
 				(font
