@@ -284,7 +284,7 @@
 			(at 0.02 7.62 0)
 			(layer "F.SilkS")
 			(hide yes)
-			(uuid "eedba827-1bab-4e52-87bd-6c2967a42978")
+			(uuid "51efdd70-63dd-493f-aaaf-7bf106aed20d")
 			(effects
 				(font
 					(size 1 1)
@@ -295,7 +295,7 @@
 		(property "Value" "I/O connector"
 			(at 8.636 -3.048 0)
 			(layer "F.Fab")
-			(uuid "c7096f5f-cbee-4a77-9754-5c7faa2d6efa")
+			(uuid "71bc95df-e1e9-4096-969a-c44c3f50ad4e")
 			(effects
 				(font
 					(size 1 1)
@@ -307,7 +307,7 @@
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "d254a6cd-677c-4e09-be94-f859e93a7714")
+			(uuid "b6e7ec91-745b-4fb1-b0ab-f77994cdf700")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -319,7 +319,7 @@
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "2889678b-def7-42ec-9a35-ff68ead83fce")
+			(uuid "9ad2a581-97ee-4686-9518-ffde48103f34")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2686,7 +2686,7 @@
 			(at -0.75 2.5 90)
 			(layer "F.SilkS")
 			(hide yes)
-			(uuid "d83aeac0-1492-4491-9eba-00fe9400453a")
+			(uuid "e6ef651f-69fc-4d59-8610-35252d6b57e8")
 			(effects
 				(font
 					(size 1 1)
@@ -2697,7 +2697,7 @@
 		(property "Value" "log shunt"
 			(at 0 1.9 0)
 			(layer "F.Fab")
-			(uuid "15d684a1-7386-40da-87a1-2ee943ca7a48")
+			(uuid "23628cc8-69ad-48ad-935c-457e3d2c3e26")
 			(effects
 				(font
 					(size 1 1)
@@ -2709,7 +2709,7 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "ecd418a6-e24d-427b-b7a2-3e6e8a71a737")
+			(uuid "8abcbe4b-0ec7-47cc-8808-362b9b4d5ebf")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2721,7 +2721,7 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "476644d4-26c0-45cf-b9c4-13aff14e9156")
+			(uuid "e62155b7-71d3-46fa-a43d-2f3a6955bbd1")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2885,7 +2885,7 @@
 			(unlocked yes)
 			(layer "B.SilkS")
 			(hide yes)
-			(uuid "61462e80-6232-42d6-9904-7a0a54176941")
+			(uuid "14173cf6-7507-446c-8998-8b4fbb5fac16")
 			(effects
 				(font
 					(size 1 1)
@@ -2898,7 +2898,7 @@
 			(at 0 -6 0)
 			(unlocked yes)
 			(layer "B.Fab")
-			(uuid "4717a6f1-3c93-4cdd-8ff2-29b9fb525425")
+			(uuid "626e5cd9-9305-48eb-b28e-e5bcb9f62d33")
 			(effects
 				(font
 					(size 1 1)
@@ -2907,11 +2907,11 @@
 				(justify mirror)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://www.mouser.com/datasheet/2/15/RS__1-1370683.pdf"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "240bbfd7-15c3-4c1e-934d-d61bf6f3a6fd")
+			(uuid "f870ddea-f986-41e3-b49b-ee59956692a6")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2923,7 +2923,7 @@
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "ed7e0656-f095-4c8b-88b5-c0a6cff0b860")
+			(uuid "3b0e8560-11cd-489c-8263-4df80f586bc7")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2941,11 +2941,22 @@
 			(end 22.5 -4)
 			(stroke
 				(width 0.12)
+				(type default)
+			)
+			(fill no)
+			(layer "B.SilkS")
+			(uuid "2c241e98-a397-4b6b-83e3-eab7f51bf9e9")
+		)
+		(fp_rect
+			(start -22.5 4)
+			(end 22.5 -4)
+			(stroke
+				(width 0.12)
 				(type solid)
 			)
 			(fill no)
 			(layer "B.CrtYd")
-			(uuid "635702c8-b760-4df7-be94-cb0bdfc25cdf")
+			(uuid "053e4181-4902-41bc-acb9-4bcdd8bab819")
 		)
 		(pad "1" thru_hole circle
 			(at -17.5 -1.875 180)
@@ -2981,6 +2992,17 @@
 			(uuid "3e239b71-44b8-49b4-8edc-ab3c76332341")
 		)
 		(embedded_fonts no)
+		(model "${CYCFI_COMMON}/step_files/RS301111A01G.stp"
+			(offset
+				(xyz -5.75 -2.25 6)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz -0 -0 -0)
+			)
+		)
 	)
 	(gr_rect
 		(start 126 76)

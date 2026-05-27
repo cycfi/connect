@@ -2888,7 +2888,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://www.mouser.com/datasheet/2/15/RS__1-1370683.pdf"
 			(at 87.63 115.57 0)
 			(effects
 				(font
