@@ -7935,7 +7935,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "NMOS"
+		(property "Value" "2N7002"
 			(at 197.485 125.0949 0)
 			(effects
 				(font
@@ -7982,6 +7982,24 @@
 		)
 		(property "Sim.Type" "VDMOS"
 			(at 191.135 142.875 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Name" "2N7002"
+			(at 191.135 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Library" "${KIPRJMOD}/../../pcb_common/kicad/cycfi_spice_library.sp"
+			(at 191.135 146.685 0)
 			(effects
 				(font
 					(size 1.27 1.27)
