@@ -5109,7 +5109,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tlv9002.pdf"
 			(at 222.25 157.48 0)
 			(effects
 				(font
@@ -5377,7 +5377,7 @@
 				)
 			)
 		)
-		(property "Value" "LM393BIDGKR"
+		(property "Value" "LM393LVDGKR"
 			(at 232.41 85.09 0)
 			(effects
 				(font
@@ -5394,7 +5394,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/lm393.pdf"
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/lm393lv.pdf"
 			(at 231.14 104.394 0)
 			(effects
 				(font
@@ -6223,7 +6223,7 @@
 				)
 			)
 		)
-		(property "Value" "LM393BIDGKR"
+		(property "Value" "LM393LVDGKR"
 			(at 232.41 67.31 0)
 			(effects
 				(font
@@ -6240,7 +6240,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/lm393.pdf"
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/lm393lv.pdf"
 			(at 231.14 86.614 0)
 			(effects
 				(font
@@ -6423,7 +6423,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tlv9002.pdf"
 			(at 101.6 134.62 0)
 			(effects
 				(font
@@ -6836,7 +6836,7 @@
 				)
 			)
 		)
-		(property "Value" "1K"
+		(property "Value" "1k"
 			(at 87.63 66.0369 90)
 			(effects
 				(font
@@ -7014,7 +7014,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C25530"
+		(property "LCSC" "C25741"
 			(at 237.49 193.04 0)
 			(effects
 				(font
@@ -7769,7 +7769,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#cha_MOSFETs"
+		(property "Datasheet" "https://jlcpcb.com/api/file/downloadByFileSystemAccessId/8550724090244980736"
 			(at 321.31 151.13 0)
 			(effects
 				(font
@@ -8525,7 +8525,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C25530"
+		(property "LCSC" "C25741"
 			(at 224.79 213.36 0)
 			(effects
 				(font
@@ -8730,7 +8730,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://lcsc.com/datasheet/lcsc_datasheet_1811061932_Holtek-Semicon-HT7550-1_C16106.pdf"
 			(at 90.17 124.46 0)
 			(effects
 				(font
@@ -8910,7 +8910,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C25530"
+		(property "LCSC" "C25741"
 			(at 209.55 213.36 0)
 			(effects
 				(font
@@ -9687,7 +9687,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tlv9002.pdf"
 			(at 222.25 190.5 0)
 			(effects
 				(font
@@ -10118,7 +10118,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "LM393BIDGKR"
+		(property "Value" "LM393LVDGKR"
 			(at 124.46 105.41 0)
 			(effects
 				(font
@@ -10136,7 +10136,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/lm393.pdf"
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/lm393lv.pdf"
 			(at 124.46 110.49 0)
 			(effects
 				(font
@@ -10240,7 +10240,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://jlcpcb.com/api/file/downloadByFileSystemAccessId/8579707645122699264"
 			(at 59.69 104.14 90)
 			(effects
 				(font

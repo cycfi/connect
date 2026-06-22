@@ -1665,7 +1665,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://jlcpcb.com/api/file/downloadByFileSystemAccessId/8579707645122699264"
 			(at 109.22 58.42 90)
 			(effects
 				(font
@@ -2184,7 +2184,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://lcsc.com/datasheet/lcsc_datasheet_1811061932_Holtek-Semicon-HT7550-1_C16106.pdf"
 			(at 139.7 78.74 0)
 			(effects
 				(font
