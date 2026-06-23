@@ -822,6 +822,32 @@
 					(hide yes)
 				)
 			)
+			(symbol "SCHMITT_NOR_1_0_1"
+				(polyline
+					(pts
+						(xy -1.905 -1.27) (xy -0.635 -1.27) (xy 0.635 1.27) (xy 3.175 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.635 -1.27) (xy 0.635 -1.27) (xy 1.905 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
 			(symbol "SCHMITT_NOR_1_1_1"
 				(arc
 					(start -3.81 3.81)
@@ -2467,6 +2493,32 @@
 						(size 1.27 1.27)
 					)
 					(hide yes)
+				)
+			)
+			(symbol "SCHMITT_NAND_0_1"
+				(polyline
+					(pts
+						(xy -3.175 -1.27) (xy -1.905 -1.27) (xy -0.635 1.27) (xy 1.905 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.905 -1.27) (xy -0.635 -1.27) (xy 0.635 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
 				)
 			)
 			(symbol "SCHMITT_NAND_1_1"
@@ -5627,7 +5679,7 @@
 				(hide yes)
 			)
 		)
-		(property "Sim.Library" "${KIPRJMOD}/../../pcb_common/kicad/cycfi_spice_library.sp"
+		(property "Sim.Library" "/Users/joel/dev/cycfi/connect/pcb_common/kicad/cycfi_spice_library.sp"
 			(at 335.915 200.025 0)
 			(effects
 				(font
@@ -7236,7 +7288,7 @@
 				(hide yes)
 			)
 		)
-		(property "Sim.Library" "${KIPRJMOD}/../../pcb_common/kicad/cycfi_spice_library.sp"
+		(property "Sim.Library" "/Users/joel/dev/cycfi/connect/pcb_common/kicad/cycfi_spice_library.sp"
 			(at 321.31 201.93 0)
 			(effects
 				(font
