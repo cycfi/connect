@@ -492,7 +492,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "SCHMITT_NAND_1"
+		(symbol "SCHMITT_MUX_1"
 			(pin_names
 				(offset 0.254)
 			)
@@ -500,15 +500,15 @@
 			(in_bom yes)
 			(on_board yes)
 			(property "Reference" "U"
-				(at 0 5.08 0)
+				(at 6.096 -4.572 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
 				)
 			)
-			(property "Value" "SCHMITT_NAND"
-				(at 0 -5.08 0)
+			(property "Value" "SCHMITT_MUX"
+				(at 6.604 -1.778 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -516,10 +516,11 @@
 				)
 			)
 			(property "Footprint" ""
-				(at 0 0 0)
+				(at -20.32 2.54 0)
 				(effects
 					(font
 						(size 1.27 1.27)
+						(italic yes)
 					)
 					(hide yes)
 				)
@@ -529,12 +530,13 @@
 				(effects
 					(font
 						(size 1.27 1.27)
+						(italic yes)
 					)
 					(hide yes)
 				)
 			)
-			(property "Description" "2-input Schmitt NAND (one 74x132 gate) for simulation"
-				(at 3.048 -19.558 0)
+			(property "Description" "2:1 mux with Schmitt-trigger inputs (configurable-gate model, e.g. 74x1G97) for simulation"
+				(at -5.588 -20.066 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -542,8 +544,8 @@
 					(hide yes)
 				)
 			)
-			(property "Sim.Pins" "1=a 2=b 3=vcc 4=gnd 5=out"
-				(at 1.524 -12.192 0)
+			(property "Sim.Pins" "1=in 2=vdd 3=gnd 4=s1 5=d 6=s2"
+				(at 1.27 -13.97 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -552,17 +554,16 @@
 				)
 			)
 			(property "Sim.Device" "SUBCKT"
-				(at 0 0 0)
+				(at -4.318 -28.448 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left)
 					(hide yes)
 				)
 			)
 			(property "Sim.Library" "/Users/joel/dev/cycfi/connect/pcb_common/kicad/cycfi_spice_library.sp"
-				(at 2.286 -16.002 0)
+				(at -2.54 -17.018 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -570,8 +571,8 @@
 					(hide yes)
 				)
 			)
-			(property "Sim.Name" "cycfi_schmitt_nand"
-				(at 0.254 -26.67 0)
+			(property "Sim.Name" "cycfi_schmitt_mux"
+				(at -3.81 -25.908 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -580,7 +581,7 @@
 				)
 			)
 			(property "Sim.Params" "VTH=0.5 VH=0.18 SHARP=0.06"
-				(at -1.27 -23.368 0)
+				(at -2.794 -23.114 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -588,7 +589,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_keywords" "simulation schmitt nand gate 74132"
+			(property "ki_keywords" "simulation schmitt mux configurable gate 1G97 mux"
 				(at 0 0 0)
 				(effects
 					(font
@@ -597,98 +598,160 @@
 					(hide yes)
 				)
 			)
-			(symbol "SCHMITT_NAND_1_1_1"
-				(arc
-					(start 0 3.81)
-					(mid 3.7934 0)
-					(end 0 -3.81)
+			(property "ki_fp_filters" "KS_6_ADI KS_6_ADI-M KS_6_ADI-L"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "SCHMITT_MUX_1_0_1"
+				(polyline
+					(pts
+						(xy -8.255 3.81) (xy -7.62 3.81) (xy -6.985 5.08) (xy -5.715 5.08)
+					)
 					(stroke
-						(width 0.254)
+						(width 0)
 						(type default)
 					)
 					(fill
-						(type background)
+						(type none)
 					)
 				)
 				(polyline
 					(pts
-						(xy 0 3.81) (xy -3.81 3.81) (xy -3.81 -3.81) (xy 0 -3.81)
+						(xy -7.62 3.81) (xy -6.6675 3.81) (xy -6.0325 5.08)
 					)
 					(stroke
-						(width 0.254)
+						(width 0)
 						(type default)
 					)
 					(fill
-						(type background)
+						(type none)
 					)
 				)
-				(pin input line
-					(at -7.62 2.54 0)
-					(length 3.81)
-					(name "A"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
+				(polyline
+					(pts
+						(xy -6.35 -5.715) (xy -5.715 -5.715) (xy -5.08 -4.445) (xy -3.81 -4.445)
 					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
 					)
 				)
-				(pin input line
-					(at -7.62 -2.54 0)
-					(length 3.81)
-					(name "B"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
+				(polyline
+					(pts
+						(xy -5.715 -5.715) (xy -4.7625 -5.715) (xy -4.1275 -4.445)
 					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
+					(stroke
+						(width 0)
+						(type default)
 					)
-				)
-				(pin output inverted
-					(at 7.62 0 180)
-					(length 3.81)
-					(name "OUT"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
+					(fill
+						(type none)
 					)
 				)
 			)
-			(symbol "SCHMITT_NAND_1_2_1"
-				(pin power_in line
-					(at -2.54 8.89 270)
-					(length 3.81)
-					(name "VCC"
+			(symbol "SCHMITT_MUX_1_1_1"
+				(polyline
+					(pts
+						(xy -6.35 6.35) (xy -2.032 6.35) (xy -3.048 5.08) (xy -4.064 6.35)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -6.35 1.27) (xy -2.032 1.27) (xy -3.048 2.54) (xy -4.064 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -6.35 -2.794) (xy -6.35 -7.366) (xy -2.032 -5.08) (xy -6.35 -2.794)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.032 -5.08) (xy -1.016 -5.08) (xy -1.016 4.318)
+					)
+					(stroke
+						(width 0)
+						(type dash)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 3.81) (xy -3.81 5.334)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 1.27 3.81)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 5.334 3.81) (xy 1.778 3.81)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin bidirectional line
+					(at -11.43 6.35 0)
+					(length 5.08)
+					(name ""
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "3"
+					(number "6"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -696,10 +759,10 @@
 						)
 					)
 				)
-				(pin power_in line
-					(at -2.54 -7.62 90)
-					(length 3.81)
-					(name "GND"
+				(pin bidirectional line
+					(at -11.43 1.27 0)
+					(length 5.08)
+					(name ""
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -714,217 +777,9 @@
 						)
 					)
 				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "SCHMITT_NOR_1"
-			(pin_names
-				(offset 0.254)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "U"
-				(at 0 5.08 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "SCHMITT_NOR"
-				(at 0 -5.08 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "2-input Schmitt NOR for simulation"
-				(at -1.778 -11.176 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Sim.Pins" "1=a 2=b 3=vcc 4=gnd 5=out"
-				(at -1.27 -19.558 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Sim.Device" "SUBCKT"
-				(at -3.81 -8.89 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-					(hide yes)
-				)
-			)
-			(property "Sim.Library" "/Users/joel/dev/cycfi/connect/pcb_common/kicad/cycfi_spice_library.sp"
-				(at -2.032 -13.716 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Sim.Name" "cycfi_schmitt_nor"
-				(at -1.016 -22.098 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Sim.Params" "VTH=0.5 VH=0.18 SHARP=0.06"
-				(at -2.032 -16.764 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "simulation schmitt nor gate"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "SCHMITT_NOR_1_0_1"
-				(polyline
-					(pts
-						(xy -1.905 -1.27) (xy -0.635 -1.27) (xy 0.635 1.27) (xy 3.175 1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.635 -1.27) (xy 0.635 -1.27) (xy 1.905 1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "SCHMITT_NOR_1_1_1"
-				(arc
-					(start -3.81 3.81)
-					(mid -2.589 0)
-					(end -3.81 -3.81)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -3.81 3.81) (xy -0.635 3.81)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(polyline
-					(pts
-						(xy -3.81 -3.81) (xy -0.635 -3.81)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(arc
-					(start 4.445 0)
-					(mid 2.503 -2.6816)
-					(end -0.6096 -3.81)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(arc
-					(start -0.6096 3.81)
-					(mid 2.5094 2.6899)
-					(end 4.445 0)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.635 3.81) (xy -3.81 3.81) (xy -3.556 3.4036) (xy -3.0226 2.2606) (xy -2.6924 1.0414) (xy -2.6162 -0.254)
-						(xy -2.7686 -1.4986) (xy -3.175 -2.7178) (xy -3.81 -3.81) (xy -0.635 -3.81)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
 				(pin input line
-					(at -7.62 2.54 0)
-					(length 4.318)
+					(at -11.43 -5.08 0)
+					(length 5.08)
 					(name ""
 						(effects
 							(font
@@ -940,27 +795,9 @@
 						)
 					)
 				)
-				(pin input line
-					(at -7.62 -2.54 0)
-					(length 4.318)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin output inverted
-					(at 8.89 0 180)
-					(length 4.318)
+				(pin bidirectional line
+					(at 10.16 3.81 180)
+					(length 5.08)
 					(name ""
 						(effects
 							(font
@@ -977,11 +814,29 @@
 					)
 				)
 			)
-			(symbol "SCHMITT_NOR_1_2_1"
+			(symbol "SCHMITT_MUX_1_2_1"
 				(pin power_in line
-					(at -2.54 7.62 270)
-					(length 3.81)
-					(name "VCC"
+					(at 0 7.62 270)
+					(length 2.54)
+					(name "VDD"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_out line
+					(at 0 -7.62 90)
+					(length 2.54)
+					(name "GND"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -992,125 +847,6 @@
 						(effects
 							(font
 								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at -2.54 -7.62 90)
-					(length 3.81)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "Simulation_SPICE:0"
-			(power)
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 0)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "#GND"
-				(at 0 -5.08 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Value" "0"
-				(at 0 -2.54 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#subsec_Circuit_elements__device"
-				(at 0 -10.16 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "0V reference potential for simulation"
-				(at 0 -7.62 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "simulation"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "0_0_1"
-				(polyline
-					(pts
-						(xy -1.27 0) (xy 0 -1.27) (xy 1.27 0) (xy -1.27 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "0_1_1"
-				(pin power_in line
-					(at 0 0 0)
-					(length 0)
-					(name "~"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.016 1.016)
 							)
 						)
 					)
@@ -2390,7 +2126,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "cycfi_spice_library:SCHMITT_NAND"
+		(symbol "cycfi_spice_library:SCHMITT_MUX"
 			(pin_names
 				(offset 0.254)
 			)
@@ -2398,15 +2134,15 @@
 			(in_bom yes)
 			(on_board yes)
 			(property "Reference" "U"
-				(at 0 5.08 0)
+				(at 6.096 -4.572 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
 				)
 			)
-			(property "Value" "SCHMITT_NAND"
-				(at 0 -5.08 0)
+			(property "Value" "SCHMITT_MUX"
+				(at 6.604 -1.778 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -2414,10 +2150,11 @@
 				)
 			)
 			(property "Footprint" ""
-				(at 0 0 0)
+				(at -20.32 2.54 0)
 				(effects
 					(font
 						(size 1.27 1.27)
+						(italic yes)
 					)
 					(hide yes)
 				)
@@ -2427,12 +2164,13 @@
 				(effects
 					(font
 						(size 1.27 1.27)
+						(italic yes)
 					)
 					(hide yes)
 				)
 			)
-			(property "Description" "2-input Schmitt NAND for simulation"
-				(at 3.048 -19.558 0)
+			(property "Description" "2:1 mux with Schmitt-trigger inputs (configurable-gate model, e.g. 74x1G97) for simulation"
+				(at 0 0 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -2440,8 +2178,8 @@
 					(hide yes)
 				)
 			)
-			(property "Sim.Pins" "1=a 2=b 3=vcc 4=gnd 5=out"
-				(at 1.524 -12.192 0)
+			(property "Sim.Pins" "1=in 2=vdd 3=gnd 4=s1 5=d 6=s2"
+				(at 0 0 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -2450,43 +2188,15 @@
 				)
 			)
 			(property "Sim.Device" "SUBCKT"
-				(at -3.048 -9.906 0)
+				(at 0 0 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left)
 					(hide yes)
 				)
 			)
 			(property "Sim.Library" "/Users/joel/dev/cycfi/connect/pcb_common/kicad/cycfi_spice_library.sp"
-				(at 2.286 -16.002 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Sim.Name" "cycfi_schmitt_nand"
-				(at 0.254 -26.67 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Sim.Params" "VTH=0.5 VH=0.18 SHARP=0.06"
-				(at -1.27 -23.368 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "simulation schmitt nand gate"
 				(at 0 0 0)
 				(effects
 					(font
@@ -2495,231 +2205,7 @@
 					(hide yes)
 				)
 			)
-			(symbol "SCHMITT_NAND_0_1"
-				(polyline
-					(pts
-						(xy -3.175 -1.27) (xy -1.905 -1.27) (xy -0.635 1.27) (xy 1.905 1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.905 -1.27) (xy -0.635 -1.27) (xy 0.635 1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "SCHMITT_NAND_1_1"
-				(arc
-					(start 0 3.81)
-					(mid 3.7934 0)
-					(end 0 -3.81)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 3.81) (xy -3.81 3.81) (xy -3.81 -3.81) (xy 0 -3.81)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(pin input line
-					(at -7.62 2.54 0)
-					(length 3.81)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -7.62 -2.54 0)
-					(length 3.81)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin output inverted
-					(at 7.62 0 180)
-					(length 3.81)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(symbol "SCHMITT_NAND_2_1"
-				(pin power_in line
-					(at -2.54 8.89 270)
-					(length 3.81)
-					(name "VCC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at -2.54 -7.62 90)
-					(length 3.81)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "cycfi_spice_library:SCHMITT_NOR"
-			(pin_names
-				(offset 0.254)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "U"
-				(at 0 5.08 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "SCHMITT_NOR"
-				(at 0 -5.08 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "2-input Schmitt NOR for simulation"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Sim.Pins" "1=a 2=b 3=vcc 4=gnd 5=out"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Sim.Device" "SUBCKT"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-					(hide yes)
-				)
-			)
-			(property "Sim.Library" "${KIPRJMOD}/../../pcb_common/kicad/cycfi_spice_library.sp"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Sim.Name" "cycfi_schmitt_nor"
+			(property "Sim.Name" "cycfi_schmitt_mux"
 				(at 0 0 0)
 				(effects
 					(font
@@ -2737,7 +2223,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_keywords" "simulation schmitt nor gate"
+			(property "ki_keywords" "simulation schmitt mux configurable gate 1G97 mux"
 				(at 0 0 0)
 				(effects
 					(font
@@ -2746,13 +2232,22 @@
 					(hide yes)
 				)
 			)
-			(symbol "SCHMITT_NOR_1_1"
-				(arc
-					(start -3.81 3.81)
-					(mid -2.589 0)
-					(end -3.81 -3.81)
+			(property "ki_fp_filters" "KS_6_ADI KS_6_ADI-M KS_6_ADI-L"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "SCHMITT_MUX_1_1"
+				(polyline
+					(pts
+						(xy -6.35 6.35) (xy -2.032 6.35) (xy -3.048 5.08) (xy -4.064 6.35)
+					)
 					(stroke
-						(width 0.254)
+						(width 0)
 						(type default)
 					)
 					(fill
@@ -2761,69 +2256,115 @@
 				)
 				(polyline
 					(pts
-						(xy -3.81 3.81) (xy -0.635 3.81)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(polyline
-					(pts
-						(xy -3.81 -3.81) (xy -0.635 -3.81)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(arc
-					(start 3.81 0)
-					(mid 2.1855 -2.584)
-					(end -0.6096 -3.81)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(arc
-					(start -0.6096 3.81)
-					(mid 2.1928 2.5924)
-					(end 3.81 0)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.635 3.81) (xy -3.81 3.81) (xy -3.556 3.4036) (xy -3.0226 2.2606) (xy -2.6924 1.0414) (xy -2.6162 -0.254)
-						(xy -2.7686 -1.4986) (xy -3.175 -2.7178) (xy -3.81 -3.81) (xy -0.635 -3.81)
+						(xy -6.35 1.27) (xy -2.032 1.27) (xy -3.048 2.54) (xy -4.064 1.27)
 					)
 					(stroke
 						(width 0)
 						(type default)
 					)
 					(fill
-						(type background)
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -6.35 -2.794) (xy -6.35 -7.366) (xy -2.032 -5.08) (xy -6.35 -2.794)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.032 -5.08) (xy -1.016 -5.08) (xy -1.016 4.318)
+					)
+					(stroke
+						(width 0)
+						(type dash)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 3.81) (xy -3.81 5.334)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 1.27 3.81)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 5.334 3.81) (xy 1.778 3.81)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin bidirectional line
+					(at -11.43 6.35 0)
+					(length 5.08)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -11.43 1.27 0)
+					(length 5.08)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
 					)
 				)
 				(pin input line
-					(at -7.62 2.54 0)
-					(length 4.318)
-					(name "A"
+					(at -11.43 -5.08 0)
+					(length 5.08)
+					(name ""
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2838,28 +2379,10 @@
 						)
 					)
 				)
-				(pin input line
-					(at -7.62 -2.54 0)
-					(length 4.318)
-					(name "B"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin output inverted
-					(at 7.62 0 180)
-					(length 1.524)
-					(name "OUT"
+				(pin bidirectional line
+					(at 10.16 3.81 180)
+					(length 5.08)
+					(name ""
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2875,18 +2398,18 @@
 					)
 				)
 			)
-			(symbol "SCHMITT_NOR_2_1"
+			(symbol "SCHMITT_MUX_2_1"
 				(pin power_in line
-					(at -2.54 7.62 270)
-					(length 3.81)
-					(name "VCC"
+					(at 0 7.62 270)
+					(length 2.54)
+					(name "VDD"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "3"
+					(number "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2894,9 +2417,9 @@
 						)
 					)
 				)
-				(pin power_in line
-					(at -2.54 -7.62 90)
-					(length 3.81)
+				(pin power_out line
+					(at 0 -7.62 90)
+					(length 2.54)
 					(name "GND"
 						(effects
 							(font
@@ -2904,7 +2427,7 @@
 							)
 						)
 					)
-					(number "4"
+					(number "3"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3191,8 +2714,8 @@
 		(uuid 5ea524f8-5fe2-4213-94ff-7dd6f56c7344)
 	)
 	(rectangle
-		(start 161.29 161.29)
-		(end 224.79 201.93)
+		(start 155.575 161.29)
+		(end 224.155 206.375)
 		(stroke
 			(width 0)
 			(type default)
@@ -3251,9 +2774,9 @@
 		)
 		(uuid "182703b6-1513-44d9-8526-658cbcaf9801")
 	)
-	(text "RESET WITH LATCH-RECOVERY LOGIC\nRESET = WINDOW  OR  STARTUP  OR  TIMEOUT\n(active-low: 0 = correct, 1 = hold)\n\n-STARTUP (R21/C20): ramps low-to-high at power-on;\nwhile low it pulls RESET low so the servo acquires\ncenter on power-up.\n\n-WINDOW (comparators): high when OUT is inside the\nreset window around VREF, low when outside;\ninside = correct, a bend = hold.\n\n-TIMEOUT (D1/R22 charge, D2/R23 decay, C21): an\nasymmetric envelope off WINDOW (fast in, slow out).\nIf OUT stays outside the window much longer than\nany real bend (~20 s), it pulls RESET low to\nre-acquire center, breaking a latch-up."
+	(text "RESET WITH LATCH-RECOVERY LOGIC\nRESET = WINDOW ? 0 : CTN   ( = !WINDOW . CTN )\none Schmitt 2:1 mux, active-low: 0 = correct, 1 = hold\n\n-WINDOW (comparators):\n    - high: OUT is inside the reset window around VREF\n    - low:  OUT is outside\n\n-CTN (D1/R22 charge, D2/R23 decay, C21): an asymmetric\nenvelope off WINDOW, fast in (~0.1 s) / slow out (~20 s).\nWhen outside, RESET = CTN:\n    - CTN high (inside < ~20 s ago): hold a bend\n    - CTN low  (stuck, or not yet acquired): correct\n\nCTN-low re-centers in BOTH cases:\n- STARTUP: cap powers up discharged, so RESET stays\n  asserted (correct) until OUT is first acquired.\n- LATCH-UP: OUT stuck outside >> any real bend -> CTN\n  decays low -> re-acquire."
 		(exclude_from_sim no)
-		(at 165.1 181.61 0)
+		(at 159.385 184.15 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3372,16 +2895,16 @@
 		(uuid "7b5a3765-e69b-4ad6-a09b-f8ffd4a3fb42")
 	)
 	(junction
+		(at 172.72 130.81)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "7c601b71-8ed8-4ceb-b211-94b98c87ca2b")
+	)
+	(junction
 		(at 97.155 98.425)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "83fa7b76-ee0a-4873-ac75-ca80f7f5f19d")
-	)
-	(junction
-		(at 172.72 130.81)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "98c65959-fc72-4a7f-b28b-91c9ef06f8e9")
 	)
 	(junction
 		(at 75.565 95.885)
@@ -3394,12 +2917,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "a1c9220c-b3c8-4e29-b51b-c7b76e969d56")
-	)
-	(junction
-		(at 161.29 113.03)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "a8e1b380-6763-4bac-87af-14d4090badea")
 	)
 	(junction
 		(at 321.31 90.17)
@@ -3438,10 +2955,10 @@
 		(uuid "f3798bca-65ab-4705-9b42-b453ac0f557d")
 	)
 	(junction
-		(at 201.93 134.62)
+		(at 208.28 130.81)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "f6276772-a317-43d3-950e-356d6438e79f")
+		(uuid "fdb1a8a0-df04-4fa2-bbd0-0e01928df786")
 	)
 	(wire
 		(pts
@@ -3452,16 +2969,6 @@
 			(type default)
 		)
 		(uuid "003a8e1f-c1f2-4fec-8b00-0ca9a05a1f57")
-	)
-	(wire
-		(pts
-			(xy 201.93 138.43) (xy 201.93 134.62)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0272485a-4ce2-4c9e-922b-0508e6f31625")
 	)
 	(wire
 		(pts
@@ -3482,6 +2989,16 @@
 			(type default)
 		)
 		(uuid "0c5e20b5-0f84-4c15-8137-9913d4860f6d")
+	)
+	(wire
+		(pts
+			(xy 208.28 130.81) (xy 208.28 120.015)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0ce9cc6f-8abd-47bf-8f4a-188db6e869cc")
 	)
 	(wire
 		(pts
@@ -3535,6 +3052,26 @@
 	)
 	(wire
 		(pts
+			(xy 215.9 130.81) (xy 208.28 130.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "23f838b9-8be7-48a0-9fe7-e46244d34403")
+	)
+	(wire
+		(pts
+			(xy 182.88 120.015) (xy 182.88 114.935)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "252b0d81-b5e4-456f-a272-f3c4366ec66d")
+	)
+	(wire
+		(pts
 			(xy 341.63 62.23) (xy 341.63 64.77)
 		)
 		(stroke
@@ -3575,7 +3112,17 @@
 	)
 	(wire
 		(pts
-			(xy 66.04 171.45) (xy 66.04 175.895)
+			(xy 208.28 138.43) (xy 208.28 130.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2e92dbd3-1422-40db-b985-861ce1a79dd6")
+	)
+	(wire
+		(pts
+			(xy 66.04 171.45) (xy 66.04 173.99)
 		)
 		(stroke
 			(width 0)
@@ -3615,23 +3162,13 @@
 	)
 	(wire
 		(pts
-			(xy 201.93 134.62) (xy 205.74 134.62)
+			(xy 172.72 108.585) (xy 172.72 130.81)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "40449d06-b8bd-4db0-9cb5-3f0ba1925246")
-	)
-	(wire
-		(pts
-			(xy 195.58 102.87) (xy 190.5 102.87)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "47d8a0b9-7c46-4c44-8fdb-1929b0ed6ae5")
+		(uuid "4313a90b-47da-49ef-b3c6-ba8a65de0ceb")
 	)
 	(wire
 		(pts
@@ -3662,16 +3199,6 @@
 			(type default)
 		)
 		(uuid "4f0140a3-3479-410f-b0c7-70eac641cb29")
-	)
-	(wire
-		(pts
-			(xy 195.58 110.49) (xy 195.58 102.87)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4f122d49-c156-4cbc-8a4b-77939ea24714")
 	)
 	(wire
 		(pts
@@ -3845,46 +3372,6 @@
 	)
 	(wire
 		(pts
-			(xy 191.77 115.57) (xy 196.85 115.57)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8ab223cd-2849-4012-8fb9-4ed54ccabb59")
-	)
-	(wire
-		(pts
-			(xy 172.72 118.11) (xy 176.53 118.11)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8bd28783-f368-4b2d-bb7d-c7d312974269")
-	)
-	(wire
-		(pts
-			(xy 161.29 123.19) (xy 161.29 120.65)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9173e0ec-6be8-4b14-a054-b023542e36d6")
-	)
-	(wire
-		(pts
-			(xy 172.72 118.11) (xy 172.72 130.81)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9a63d7e4-f89e-467f-bf3f-a4159622c153")
-	)
-	(wire
-		(pts
 			(xy 97.155 98.425) (xy 93.345 98.425)
 		)
 		(stroke
@@ -4025,7 +3512,7 @@
 	)
 	(wire
 		(pts
-			(xy 195.58 130.81) (xy 201.93 130.81)
+			(xy 195.58 130.81) (xy 208.28 130.81)
 		)
 		(stroke
 			(width 0)
@@ -4065,16 +3552,6 @@
 	)
 	(wire
 		(pts
-			(xy 161.29 102.87) (xy 161.29 104.775)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "cd69ea06-06f0-40d2-8cf4-c40242d63afc")
-	)
-	(wire
-		(pts
 			(xy 108.585 60.325) (xy 107.315 60.325)
 		)
 		(stroke
@@ -4105,6 +3582,16 @@
 	)
 	(wire
 		(pts
+			(xy 167.005 103.505) (xy 182.88 103.505)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d506ee8a-a906-4ce9-8b37-17ef3ae41d60")
+	)
+	(wire
+		(pts
 			(xy 339.09 74.93) (xy 341.63 74.93)
 		)
 		(stroke
@@ -4115,7 +3602,7 @@
 	)
 	(wire
 		(pts
-			(xy 195.58 138.43) (xy 201.93 138.43)
+			(xy 195.58 138.43) (xy 208.28 138.43)
 		)
 		(stroke
 			(width 0)
@@ -4132,6 +3619,16 @@
 			(type default)
 		)
 		(uuid "dde36c1a-2d6f-44e7-abc2-356228a1e650")
+	)
+	(wire
+		(pts
+			(xy 182.88 108.585) (xy 172.72 108.585)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "de30ba78-10e3-45bd-9265-cf6e062ee769")
 	)
 	(wire
 		(pts
@@ -4155,23 +3652,13 @@
 	)
 	(wire
 		(pts
-			(xy 213.36 113.03) (xy 216.535 113.03)
+			(xy 204.47 106.045) (xy 215.9 106.045)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "e12d05a5-161a-46f9-a6d8-01402feb4a48")
-	)
-	(wire
-		(pts
-			(xy 161.29 113.03) (xy 161.29 115.57)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e2a31a1a-b593-4d63-b82b-dd42b455dfa5")
 	)
 	(wire
 		(pts
@@ -4182,6 +3669,16 @@
 			(type default)
 		)
 		(uuid "e403be85-1908-43c9-8410-ec837cc4e688")
+	)
+	(wire
+		(pts
+			(xy 208.28 120.015) (xy 182.88 120.015)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e4e73f93-6a32-4805-a37a-c4b5ae900d53")
 	)
 	(wire
 		(pts
@@ -4212,26 +3709,6 @@
 			(type default)
 		)
 		(uuid "e70dcd3d-ee97-47bf-8d1b-c6d469f07dcc")
-	)
-	(wire
-		(pts
-			(xy 195.58 110.49) (xy 196.85 110.49)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ebdce6e9-18f3-4662-9ad0-8c7b9b73799e")
-	)
-	(wire
-		(pts
-			(xy 161.29 109.855) (xy 161.29 113.03)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ed50eaaa-4ea8-48cc-a114-9291084fc66c")
 	)
 	(wire
 		(pts
@@ -4275,16 +3752,6 @@
 	)
 	(wire
 		(pts
-			(xy 161.29 113.03) (xy 176.53 113.03)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f419c0cf-d94c-431e-aa5b-bf0a59e3ed21")
-	)
-	(wire
-		(pts
 			(xy 280.67 92.71) (xy 285.115 92.71)
 		)
 		(stroke
@@ -4295,16 +3762,6 @@
 	)
 	(wire
 		(pts
-			(xy 201.93 130.81) (xy 201.93 134.62)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f743444a-22a9-4eab-a483-9ae3f2b6b8eb")
-	)
-	(wire
-		(pts
 			(xy 75.565 115.57) (xy 78.105 115.57)
 		)
 		(stroke
@@ -4312,6 +3769,16 @@
 			(type default)
 		)
 		(uuid "fc5ebb43-1b63-4836-8940-1b89864a5007")
+	)
+	(wire
+		(pts
+			(xy 167.005 106.045) (xy 167.005 103.505)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fd194a42-9b6f-4236-81ef-6bffe7903f39")
 	)
 	(wire
 		(pts
@@ -4352,6 +3819,16 @@
 			(justify left bottom)
 		)
 		(uuid "d6fe024e-08fa-4708-a859-58072ceac47e")
+	)
+	(label "CTN"
+		(at 172.72 130.81 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d76c5bca-0afd-42c3-a998-7998c2a7daf9")
 	)
 	(global_label "RESET"
 		(shape input)
@@ -4443,7 +3920,7 @@
 	)
 	(global_label "RESET"
 		(shape input)
-		(at 216.535 113.03 0)
+		(at 215.9 106.045 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4453,7 +3930,7 @@
 		)
 		(uuid "72d5ce08-9af9-4f24-974a-78e38815afac")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 216.535 113.03 0)
+			(at 215.9 106.045 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4487,22 +3964,22 @@
 	)
 	(global_label "WINDOW"
 		(shape input)
-		(at 190.5 102.87 180)
+		(at 215.9 130.81 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right)
+			(justify left)
 		)
 		(uuid "7b7a207d-79a6-425c-8b99-547ac4a49fbf")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 180.0762 102.87 0)
+			(at 226.3238 130.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 				(hide yes)
 			)
 		)
@@ -4520,50 +3997,6 @@
 		(uuid "93a5f152-0f82-439b-8b21-8a35054c442f")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 121.5488 60.325 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "WINDOW"
-		(shape input)
-		(at 205.74 134.62 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "a2da7eb1-4863-470d-a4d0-4a242030a348")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 216.1638 134.62 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "+5V"
-		(shape input)
-		(at 333.375 192.405 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "c3a66e47-5abf-4f8e-87a3-6349482eb19c")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 333.375 192.405 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4661,28 +4094,6 @@
 			)
 		)
 	)
-	(global_label "GND"
-		(shape input)
-		(at 333.375 207.645 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "eb056856-f2f6-47ce-8704-d9c164687e1c")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 333.375 207.645 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "SENSOR"
 		(shape input)
 		(at 65.405 157.48 180)
@@ -4707,7 +4118,7 @@
 	)
 	(symbol
 		(lib_id "cycfi_spice_library:ADG779")
-		(at 330.2 166.37 0)
+		(at 341.63 163.83 0)
 		(unit 2)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4715,7 +4126,7 @@
 		(dnp no)
 		(uuid "02a914d0-95f9-4a76-858a-929f2c82e530")
 		(property "Reference" "U3"
-			(at 331.47 161.29 0)
+			(at 342.9 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4724,7 +4135,7 @@
 			)
 		)
 		(property "Value" "ADG779"
-			(at 331.47 167.6399 0)
+			(at 342.9 165.0999 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4734,7 +4145,7 @@
 			)
 		)
 		(property "Footprint" "KS_6_ADI"
-			(at 309.88 163.83 0)
+			(at 321.31 161.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4744,7 +4155,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.analog.com/media/en/technical-documentation/data-sheets/ADG779.pdf"
-			(at 330.2 166.37 0)
+			(at 341.63 163.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4754,7 +4165,7 @@
 			)
 		)
 		(property "Description" "ADG779 SPDT analog switch with ngspice behavioral model"
-			(at 330.2 166.37 0)
+			(at 341.63 163.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4763,7 +4174,7 @@
 			)
 		)
 		(property "Sim.Pins" "1=in 2=vdd 3=gnd 4=s1 5=d 6=s2"
-			(at 330.2 166.37 0)
+			(at 341.63 163.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4772,7 +4183,7 @@
 			)
 		)
 		(property "Sim.Device" "SUBCKT"
-			(at 330.2 166.37 0)
+			(at 341.63 163.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4781,7 +4192,7 @@
 			)
 		)
 		(property "Sim.Library" "/Users/joel/dev/cycfi/connect/pcb_common/kicad/cycfi_spice_library.sp"
-			(at 330.2 166.37 0)
+			(at 341.63 163.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4790,7 +4201,7 @@
 			)
 		)
 		(property "Sim.Name" "cycfi_adg779_spdt"
-			(at 330.2 166.37 0)
+			(at 341.63 163.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4799,7 +4210,7 @@
 			)
 		)
 		(property "Sim.Params" "RON=2.5 ROFF=1e12 VTH=0.5 VSW=10m"
-			(at 330.2 166.37 0)
+			(at 341.63 163.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4836,7 +4247,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 341.63 173.99 0)
+		(at 318.77 207.645 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4845,7 +4256,7 @@
 		(fields_autoplaced yes)
 		(uuid "0cc89baf-ade9-43f1-a97d-2f278dd8cf4d")
 		(property "Reference" "#PWR028"
-			(at 341.63 180.34 0)
+			(at 318.77 213.995 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4854,7 +4265,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 341.63 179.07 0)
+			(at 318.77 212.725 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4862,7 +4273,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 341.63 173.99 0)
+			(at 318.77 207.645 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4871,7 +4282,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 341.63 173.99 0)
+			(at 318.77 207.645 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4880,7 +4291,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 341.63 173.99 0)
+			(at 318.77 207.645 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5543,7 +4954,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 307.34 173.99 0)
+		(at 318.77 171.45 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5552,7 +4963,7 @@
 		(fields_autoplaced yes)
 		(uuid "212507d1-29b6-45cd-83ff-59ceedc921e6")
 		(property "Reference" "#PWR016"
-			(at 307.34 180.34 0)
+			(at 318.77 177.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5561,7 +4972,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 307.34 179.07 0)
+			(at 318.77 176.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5569,7 +4980,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 307.34 173.99 0)
+			(at 318.77 171.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5578,7 +4989,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 307.34 173.99 0)
+			(at 318.77 171.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5587,7 +4998,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 307.34 173.99 0)
+			(at 318.77 171.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5603,129 +5014,6 @@
 				(path "/a157ea51-2828-471e-af10-4598cb486db8"
 					(reference "#PWR016")
 					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "cycfi_spice_library:SCHMITT_NOR")
-		(at 335.915 200.025 0)
-		(unit 2)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "23557979-688a-4f2a-aafe-ab50aa1be308")
-		(property "Reference" "U7"
-			(at 344.915 191.025 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SCHMITT_NOR"
-			(at 344.915 209.025 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" ""
-			(at 335.915 200.025 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 335.915 200.025 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "2-input Schmitt NOR for simulation"
-			(at 335.915 200.025 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" "1=a 2=b 3=vcc 4=gnd 5=out"
-			(at 335.915 200.025 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Device" "SUBCKT"
-			(at 335.915 200.025 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Sim.Library" "/Users/joel/dev/cycfi/connect/pcb_common/kicad/cycfi_spice_library.sp"
-			(at 335.915 200.025 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Name" "cycfi_schmitt_nor"
-			(at 335.915 200.025 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Params" "VTH=0.5 VH=0.18 SHARP=0.06"
-			(at 335.915 200.025 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "01fa2809-6ae5-4197-954a-abea98a87236")
-		)
-		(pin "2"
-			(uuid "533b817a-fff1-453b-ae40-defba91a4430")
-		)
-		(pin "3"
-			(uuid "328236c8-fcf1-4d72-a30d-0ede196c0d18")
-		)
-		(pin "4"
-			(uuid "757fc9b5-cc47-42f0-ad6a-574bbee865d0")
-		)
-		(pin "5"
-			(uuid "c20cfc4d-d8d1-4fbe-8fbb-7f9fe7570089")
-		)
-		(instances
-			(project "e_whammy_control_v2_sim"
-				(path "/a157ea51-2828-471e-af10-4598cb486db8"
-					(reference "U7")
-					(unit 2)
 				)
 			)
 		)
@@ -6249,6 +5537,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 341.63 207.645 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "3d68b89c-a0e6-4292-827f-bd5d14bc083b")
+		(property "Reference" "#PWR05"
+			(at 341.63 213.995 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 341.63 212.725 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 341.63 207.645 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 341.63 207.645 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 341.63 207.645 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f7af2393-6404-4b9b-bf73-c4d1e43572a5")
+		)
+		(instances
+			(project "e_whammy_control_v2_sim"
+				(path "/a157ea51-2828-471e-af10-4598cb486db8"
+					(reference "#PWR05")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R_Small")
 		(at 86.36 124.46 180)
 		(unit 1)
@@ -6454,16 +5808,16 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 161.29 123.19 0)
+		(at 167.005 106.045 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "4dc36b42-dbbd-4bbf-ae31-83bad607cdde")
-		(property "Reference" "#PWR026"
-			(at 161.29 129.54 0)
+		(uuid "4aee19b6-d80f-4840-a955-81fecf97947e")
+		(property "Reference" "#PWR07"
+			(at 167.005 112.395 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6472,7 +5826,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 161.29 128.27 0)
+			(at 167.005 110.49 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6480,7 +5834,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 161.29 123.19 0)
+			(at 167.005 106.045 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6489,7 +5843,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 161.29 123.19 0)
+			(at 167.005 106.045 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6498,7 +5852,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 161.29 123.19 0)
+			(at 167.005 106.045 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6507,12 +5861,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "17c05050-7179-424d-903d-07809894bb1f")
+			(uuid "e0b44285-86c2-4a0c-b60e-10a595b4af10")
 		)
 		(instances
 			(project "e_whammy_control_v2_sim"
 				(path "/a157ea51-2828-471e-af10-4598cb486db8"
-					(reference "#PWR026")
+					(reference "#PWR07")
 					(unit 1)
 				)
 			)
@@ -6521,7 +5875,7 @@
 	(symbol
 		(lib_name "OPEN_COLLECTOR_COMPARATOR_1")
 		(lib_id "cycfi_spice_library:OPEN_COLLECTOR_COMPARATOR")
-		(at 344.17 166.37 0)
+		(at 321.31 200.025 0)
 		(unit 2)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6529,7 +5883,7 @@
 		(dnp no)
 		(uuid "4f00f685-a222-4e39-a84b-a8c66dc3850c")
 		(property "Reference" "U4"
-			(at 344.17 161.29 0)
+			(at 321.31 194.945 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6537,7 +5891,7 @@
 			)
 		)
 		(property "Value" "OPEN_COLLECTOR_COMPARATOR"
-			(at 361.95 179.07 0)
+			(at 339.09 212.725 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6546,7 +5900,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 344.17 166.37 0)
+			(at 321.31 200.025 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6555,7 +5909,7 @@
 			)
 		)
 		(property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#sec_Non_linear_Dependent_Sources"
-			(at 352.806 187.706 0)
+			(at 329.946 221.361 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6564,7 +5918,7 @@
 			)
 		)
 		(property "Description" "Generic open-collector comparator for simulation"
-			(at 342.138 189.992 0)
+			(at 319.278 223.647 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6573,7 +5927,7 @@
 			)
 		)
 		(property "Sim.Pins" "1=in+ 2=in- 3=vcc 4=vee 5=out"
-			(at 319.278 144.018 0)
+			(at 296.418 177.673 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6582,7 +5936,7 @@
 			)
 		)
 		(property "Sim.Device" "SUBCKT"
-			(at 347.218 151.892 0)
+			(at 324.358 185.547 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6592,7 +5946,7 @@
 			)
 		)
 		(property "Sim.Library" "${KIPRJMOD}/../../pcb_common/kicad/cycfi_spice_library.sp"
-			(at 331.724 147.066 0)
+			(at 308.864 180.721 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6601,7 +5955,7 @@
 			)
 		)
 		(property "Sim.Name" "cycfi_open_collector_comparator"
-			(at 318.008 140.97 0)
+			(at 295.148 174.625 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6701,7 +6055,7 @@
 	)
 	(symbol
 		(lib_id "cycfi_spice_library:OPEN_COLLECTOR_COMPARATOR")
-		(at 355.6 166.37 0)
+		(at 332.74 200.025 0)
 		(unit 2)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6709,7 +6063,7 @@
 		(dnp no)
 		(uuid "67f15e68-9191-4955-ae15-31589ab34411")
 		(property "Reference" "U5"
-			(at 355.6 161.29 0)
+			(at 332.74 194.945 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6717,7 +6071,7 @@
 			)
 		)
 		(property "Value" "OPEN_COLLECTOR_COMPARATOR"
-			(at 373.38 179.07 0)
+			(at 350.52 212.725 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6726,7 +6080,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 355.6 166.37 0)
+			(at 332.74 200.025 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6735,7 +6089,7 @@
 			)
 		)
 		(property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#sec_Non_linear_Dependent_Sources"
-			(at 364.236 187.706 0)
+			(at 341.376 221.361 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6744,7 +6098,7 @@
 			)
 		)
 		(property "Description" "Generic open-collector comparator for simulation"
-			(at 353.568 189.992 0)
+			(at 330.708 223.647 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6753,7 +6107,7 @@
 			)
 		)
 		(property "Sim.Pins" "1=in+ 2=in- 3=vcc 4=vee 5=out"
-			(at 330.708 144.018 0)
+			(at 307.848 177.673 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6762,7 +6116,7 @@
 			)
 		)
 		(property "Sim.Device" "SUBCKT"
-			(at 358.648 151.892 0)
+			(at 335.788 185.547 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6772,7 +6126,7 @@
 			)
 		)
 		(property "Sim.Library" "${KIPRJMOD}/../../pcb_common/kicad/cycfi_spice_library.sp"
-			(at 343.154 147.066 0)
+			(at 320.294 180.721 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6781,7 +6135,7 @@
 			)
 		)
 		(property "Sim.Name" "cycfi_open_collector_comparator"
-			(at 329.438 140.97 0)
+			(at 306.578 174.625 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6814,17 +6168,17 @@
 		)
 	)
 	(symbol
-		(lib_id "Simulation_SPICE:0")
-		(at 66.04 175.895 0)
+		(lib_id "power:+5V")
+		(at 341.63 192.405 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "6e0e65b0-ee55-49c9-8926-45b14505967a")
-		(property "Reference" "#GND01"
-			(at 66.04 180.975 0)
+		(uuid "6adf2825-9fdc-4799-b1ee-117c974bf2a0")
+		(property "Reference" "#PWR06"
+			(at 341.63 196.215 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6832,8 +6186,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "0"
-			(at 66.04 173.355 0)
+		(property "Value" "+5V"
+			(at 341.63 187.325 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6841,7 +6195,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 66.04 175.895 0)
+			(at 341.63 192.405 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6849,8 +6203,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#subsec_Circuit_elements__device"
-			(at 66.04 186.055 0)
+		(property "Datasheet" ""
+			(at 341.63 192.405 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6858,8 +6212,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "0V reference potential for simulation"
-			(at 66.04 183.515 0)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 341.63 192.405 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6868,12 +6222,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "1262e991-7a66-48e3-8df0-1e76eaacc83a")
+			(uuid "53606f17-f276-4528-bfbc-3b4939d00f44")
 		)
 		(instances
 			(project "e_whammy_control_v2_sim"
 				(path "/a157ea51-2828-471e-af10-4598cb486db8"
-					(reference "#GND01")
+					(reference "#PWR06")
 					(unit 1)
 				)
 			)
@@ -7084,26 +6438,26 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 318.77 209.55 0)
+		(lib_name "SCHMITT_MUX_1")
+		(lib_id "cycfi_spice_library:SCHMITT_MUX")
+		(at 194.31 109.855 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "79c87c6f-569b-4a92-8bc2-9b835f01f435")
-		(property "Reference" "#PWR07"
-			(at 318.77 215.9 0)
+		(uuid "861f7a10-ef4e-4b3a-91e8-98c537ce43b2")
+		(property "Reference" "U6"
+			(at 193.802 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Value" "GND"
-			(at 318.77 214.63 0)
+		(property "Value" "SCHMITT_MUX"
+			(at 193.802 101.6 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7111,16 +6465,27 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 318.77 209.55 0)
+			(at 173.99 107.315 0)
 			(effects
 				(font
 					(size 1.27 1.27)
+					(italic yes)
 				)
 				(hide yes)
 			)
 		)
 		(property "Datasheet" ""
-			(at 318.77 209.55 0)
+			(at 194.31 109.855 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "2:1 mux with Schmitt-trigger inputs (configurable-gate model, e.g. 74x1G97) for simulation"
+			(at 194.31 109.855 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7128,22 +6493,73 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 318.77 209.55 0)
+		(property "Sim.Pins" "1=in 2=vdd 3=gnd 4=s1 5=d 6=s2"
+			(at 194.31 109.855 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
+		)
+		(property "Sim.Device" "SUBCKT"
+			(at 194.31 109.855 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Library" "/Users/joel/dev/cycfi/connect/pcb_common/kicad/cycfi_spice_library.sp"
+			(at 194.31 109.855 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Name" "cycfi_schmitt_mux"
+			(at 194.31 109.855 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Params" "VTH=0.5 VH=0.18 SHARP=0.06"
+			(at 194.31 109.855 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "6"
+			(uuid "890e211c-264b-4f81-9274-550d0cf6021a")
 		)
 		(pin "1"
-			(uuid "01ff387f-357a-4417-8bd7-29cf4bae5f49")
+			(uuid "4d56d0c8-1ddb-4618-96b9-0d2171ae30f4")
+		)
+		(pin "5"
+			(uuid "83182ed2-6831-41dc-ab41-0cb96b4b2650")
+		)
+		(pin "2"
+			(uuid "d217753b-b737-4302-9fe5-f0eed3af4aa0")
+		)
+		(pin "3"
+			(uuid "2239840a-9bf7-49a6-aa26-12cbe5a69dbd")
+		)
+		(pin "4"
+			(uuid "a5c49ea6-d242-4b96-bccb-8694edbba487")
 		)
 		(instances
-			(project "e_whammy_control_v2_sim"
+			(project ""
 				(path "/a157ea51-2828-471e-af10-4598cb486db8"
-					(reference "#PWR07")
+					(reference "U6")
 					(unit 1)
 				)
 			)
@@ -7151,7 +6567,7 @@
 	)
 	(symbol
 		(lib_id "power:+5V")
-		(at 353.06 158.75 0)
+		(at 330.2 192.405 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7160,7 +6576,7 @@
 		(fields_autoplaced yes)
 		(uuid "879c77d5-470f-408b-bdc1-d2a2822b8120")
 		(property "Reference" "#PWR031"
-			(at 353.06 162.56 0)
+			(at 330.2 196.215 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7169,7 +6585,7 @@
 			)
 		)
 		(property "Value" "+5V"
-			(at 353.06 153.67 0)
+			(at 330.2 187.325 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7177,7 +6593,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 353.06 158.75 0)
+			(at 330.2 192.405 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7186,7 +6602,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 353.06 158.75 0)
+			(at 330.2 192.405 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7195,7 +6611,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 353.06 158.75 0)
+			(at 330.2 192.405 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7211,130 +6627,6 @@
 				(path "/a157ea51-2828-471e-af10-4598cb486db8"
 					(reference "#PWR031")
 					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_name "SCHMITT_NAND_1")
-		(lib_id "cycfi_spice_library:SCHMITT_NAND")
-		(at 321.31 201.93 0)
-		(unit 2)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "89b974f4-69a0-4767-92cf-2a8fc1f87bc6")
-		(property "Reference" "U6"
-			(at 322.58 200.66 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SCHMITT_NAND"
-			(at 330.31 210.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" ""
-			(at 321.31 201.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 321.31 201.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "2-input Schmitt NAND for simulation"
-			(at 321.31 201.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" "1=a 2=b 3=vcc 4=gnd 5=out"
-			(at 321.31 201.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Device" "SUBCKT"
-			(at 321.31 201.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Sim.Library" "/Users/joel/dev/cycfi/connect/pcb_common/kicad/cycfi_spice_library.sp"
-			(at 321.31 201.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Name" "cycfi_schmitt_nand"
-			(at 321.31 201.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Params" "VTH=0.5 VH=0.18 SHARP=0.06"
-			(at 321.31 201.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "0aac940c-eaa0-47ba-a4b7-fef6108eaa41")
-		)
-		(pin "2"
-			(uuid "bbb1d674-21f7-4dd6-ba3a-f0366078b8e8")
-		)
-		(pin "3"
-			(uuid "be608887-0034-417a-b012-fe3a09fc7730")
-		)
-		(pin "4"
-			(uuid "14d2ad98-a166-42a7-a673-20dfc082f049")
-		)
-		(pin "5"
-			(uuid "09ade4fe-1cc1-4b35-bf53-d808d0021ecc")
-		)
-		(instances
-			(project "e_whammy_control_v2_sim"
-				(path "/a157ea51-2828-471e-af10-4598cb486db8"
-					(reference "U6")
-					(unit 2)
 				)
 			)
 		)
@@ -7503,7 +6795,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 318.77 173.99 0)
+		(at 330.2 171.45 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7512,7 +6804,7 @@
 		(fields_autoplaced yes)
 		(uuid "953fe857-7c14-4e67-9ac1-e59257337780")
 		(property "Reference" "#PWR020"
-			(at 318.77 180.34 0)
+			(at 330.2 177.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7521,7 +6813,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 318.77 179.07 0)
+			(at 330.2 176.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7529,7 +6821,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 318.77 173.99 0)
+			(at 330.2 171.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7538,7 +6830,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 318.77 173.99 0)
+			(at 330.2 171.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7547,7 +6839,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 318.77 173.99 0)
+			(at 330.2 171.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7953,7 +7245,7 @@
 	)
 	(symbol
 		(lib_id "power:+5V")
-		(at 318.77 158.75 0)
+		(at 330.2 156.21 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7962,7 +7254,7 @@
 		(fields_autoplaced yes)
 		(uuid "a1e9e670-d33c-490c-b1aa-b1d5f128cfca")
 		(property "Reference" "#PWR019"
-			(at 318.77 162.56 0)
+			(at 330.2 160.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7971,7 +7263,7 @@
 			)
 		)
 		(property "Value" "+5V"
-			(at 318.77 153.67 0)
+			(at 330.2 151.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7979,7 +7271,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 318.77 158.75 0)
+			(at 330.2 156.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7988,7 +7280,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 318.77 158.75 0)
+			(at 330.2 156.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7997,7 +7289,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 318.77 158.75 0)
+			(at 330.2 156.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8084,25 +7376,26 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C_Small")
-		(at 161.29 118.11 0)
-		(mirror y)
+		(lib_id "power:GND")
+		(at 66.04 173.99 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "b3068b73-f092-492d-b12c-b144a5b4bf7f")
-		(property "Reference" "C20"
-			(at 156.21 116.84 0)
+		(fields_autoplaced yes)
+		(uuid "b0240f67-3421-464d-91ed-a739c040cc15")
+		(property "Reference" "#PWR04"
+			(at 66.04 180.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
-		(property "Value" "2.2u"
-			(at 156.21 119.38 0)
+		(property "Value" "GND"
+			(at 66.04 179.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8110,7 +7403,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 161.29 118.11 0)
+			(at 66.04 173.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8118,8 +7411,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
-			(at 161.29 118.11 0)
+		(property "Datasheet" ""
+			(at 66.04 173.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8127,8 +7420,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "startup ramp C"
-			(at 161.29 118.11 0)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 66.04 173.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8137,15 +7430,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "16831f9f-8c7a-41c2-8eee-50850fc4fa30")
-		)
-		(pin "2"
-			(uuid "1d47154d-3e18-46be-b944-e39a761d938f")
+			(uuid "020f4484-e80a-4a88-a3c4-58da524b4b0f")
 		)
 		(instances
 			(project "e_whammy_control_v2_sim"
 				(path "/a157ea51-2828-471e-af10-4598cb486db8"
-					(reference "C20")
+					(reference "#PWR04")
 					(unit 1)
 				)
 			)
@@ -8213,72 +7503,6 @@
 			(project "e_whammy_control_v2_sim"
 				(path "/a157ea51-2828-471e-af10-4598cb486db8"
 					(reference "R6")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+5V")
-		(at 318.77 193.04 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "b3fc46bd-bba7-43db-b65b-99d8edc8e729")
-		(property "Reference" "#PWR022"
-			(at 318.77 196.85 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+5V"
-			(at 318.77 187.96 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 318.77 193.04 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 318.77 193.04 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 318.77 193.04 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "6a1535d1-6dd8-40f5-af77-4b6bbf8159a4")
-		)
-		(instances
-			(project "e_whammy_control_v2_sim"
-				(path "/a157ea51-2828-471e-af10-4598cb486db8"
-					(reference "#PWR022")
 					(unit 1)
 				)
 			)
@@ -8419,7 +7643,7 @@
 	)
 	(symbol
 		(lib_id "power:+5V")
-		(at 341.63 158.75 0)
+		(at 318.77 192.405 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8428,7 +7652,7 @@
 		(fields_autoplaced yes)
 		(uuid "c20e8e96-7aaf-4156-86ae-a86fa6928286")
 		(property "Reference" "#PWR027"
-			(at 341.63 162.56 0)
+			(at 318.77 196.215 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8437,7 +7661,7 @@
 			)
 		)
 		(property "Value" "+5V"
-			(at 341.63 153.67 0)
+			(at 318.77 187.325 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8445,7 +7669,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 341.63 158.75 0)
+			(at 318.77 192.405 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8454,7 +7678,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 341.63 158.75 0)
+			(at 318.77 192.405 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8463,7 +7687,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 341.63 158.75 0)
+			(at 318.77 192.405 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8546,72 +7770,6 @@
 			(project "e_whammy_control_v2_sim"
 				(path "/a157ea51-2828-471e-af10-4598cb486db8"
 					(reference "C21")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+5V")
-		(at 161.29 102.87 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "c67e5bce-b91f-4a15-b8e4-3864382ae4f0")
-		(property "Reference" "#PWR029"
-			(at 161.29 106.68 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+5V"
-			(at 161.29 97.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 161.29 102.87 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 161.29 102.87 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 161.29 102.87 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "5fe9a3c5-9913-4b66-be2e-5c31840db127")
-		)
-		(instances
-			(project "e_whammy_control_v2_sim"
-				(path "/a157ea51-2828-471e-af10-4598cb486db8"
-					(reference "#PWR029")
 					(unit 1)
 				)
 			)
@@ -8794,7 +7952,7 @@
 	)
 	(symbol
 		(lib_id "power:+5V")
-		(at 307.34 158.75 0)
+		(at 318.77 156.21 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8803,7 +7961,7 @@
 		(fields_autoplaced yes)
 		(uuid "c8c7a2a2-c2db-49b9-9e29-3295f3316db2")
 		(property "Reference" "#PWR015"
-			(at 307.34 162.56 0)
+			(at 318.77 160.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8812,7 +7970,7 @@
 			)
 		)
 		(property "Value" "+5V"
-			(at 307.34 153.67 0)
+			(at 318.77 151.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8820,7 +7978,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 307.34 158.75 0)
+			(at 318.77 156.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8829,7 +7987,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 307.34 158.75 0)
+			(at 318.77 156.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8838,7 +7996,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 307.34 158.75 0)
+			(at 318.77 156.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8859,69 +8017,25 @@
 		)
 	)
 	(symbol
-		(lib_id "cycfi_spice_library:SCHMITT_NAND")
-		(at 184.15 115.57 0)
-		(unit 1)
+		(lib_id "cycfi_spice_library:SCHMITT_MUX")
+		(at 341.63 200.025 0)
+		(unit 2)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "cf3d6ff9-ff57-4d72-97ee-3bca3e1702a1")
+		(uuid "cc7ae3e4-6ec1-4864-bfe5-fbb760e78e5b")
 		(property "Reference" "U6"
-			(at 184.15 109.22 0)
+			(at 342.9 194.945 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
-		(property "Value" "SCHMITT_NAND"
-			(at 193.15 124.57 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" ""
-			(at 184.15 115.57 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 184.15 115.57 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "2-input Schmitt NAND for simulation"
-			(at 184.15 115.57 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" "1=a 2=b 3=vcc 4=gnd 5=out"
-			(at 184.15 115.57 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Device" "SUBCKT"
-			(at 184.15 115.57 0)
+		(property "Value" "SCHMITT_MUX"
+			(at 342.265 201.2949 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8930,8 +8044,28 @@
 				(hide yes)
 			)
 		)
-		(property "Sim.Library" "/Users/joel/dev/cycfi/connect/pcb_common/kicad/cycfi_spice_library.sp"
-			(at 184.15 115.57 0)
+		(property "Footprint" ""
+			(at 321.31 197.485 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 341.63 200.025 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "2:1 mux with Schmitt-trigger inputs (configurable-gate model, e.g. 74x1G97) for simulation"
+			(at 341.63 200.025 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8939,8 +8073,35 @@
 				(hide yes)
 			)
 		)
-		(property "Sim.Name" "cycfi_schmitt_nand"
-			(at 184.15 115.57 0)
+		(property "Sim.Pins" "1=in 2=vdd 3=gnd 4=s1 5=d 6=s2"
+			(at 341.63 200.025 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "SUBCKT"
+			(at 341.63 200.025 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Library" "/Users/joel/dev/cycfi/connect/pcb_common/kicad/cycfi_spice_library.sp"
+			(at 341.63 200.025 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Name" "cycfi_schmitt_mux"
+			(at 341.63 200.025 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8949,7 +8110,7 @@
 			)
 		)
 		(property "Sim.Params" "VTH=0.5 VH=0.18 SHARP=0.06"
-			(at 184.15 115.57 0)
+			(at 341.63 200.025 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8957,150 +8118,29 @@
 				(hide yes)
 			)
 		)
+		(pin "6"
+			(uuid "890e211c-264b-4f81-9274-550d0cf6021a")
+		)
 		(pin "1"
-			(uuid "e9bc2b1a-b61b-4605-abf5-6742dfee6dcd")
-		)
-		(pin "2"
-			(uuid "140ad122-3c58-4338-b30d-5d3620d85e54")
-		)
-		(pin "3"
-			(uuid "a2e0466f-6b98-4a4a-8fe8-fe249955c460")
-		)
-		(pin "4"
-			(uuid "d6118969-0532-4488-864e-330a6155ebbc")
+			(uuid "4d56d0c8-1ddb-4618-96b9-0d2171ae30f4")
 		)
 		(pin "5"
-			(uuid "6d68aee1-d8ed-48ea-acb5-2da4592b7894")
+			(uuid "83182ed2-6831-41dc-ab41-0cb96b4b2650")
+		)
+		(pin "2"
+			(uuid "d217753b-b737-4302-9fe5-f0eed3af4aa0")
+		)
+		(pin "3"
+			(uuid "2239840a-9bf7-49a6-aa26-12cbe5a69dbd")
+		)
+		(pin "4"
+			(uuid "a5c49ea6-d242-4b96-bccb-8694edbba487")
 		)
 		(instances
-			(project "e_whammy_control_v2_sim"
+			(project ""
 				(path "/a157ea51-2828-471e-af10-4598cb486db8"
 					(reference "U6")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_name "SCHMITT_NOR_1")
-		(lib_id "cycfi_spice_library:SCHMITT_NOR")
-		(at 204.47 113.03 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "d38ca54a-802f-4e6c-b740-0f2b8b7cca5c")
-		(property "Reference" "U7"
-			(at 206.375 106.68 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SCHMITT_NOR"
-			(at 213.47 122.03 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" ""
-			(at 204.47 113.03 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 204.47 113.03 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "2-input Schmitt NOR for simulation"
-			(at 204.47 113.03 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" "1=a 2=b 3=vcc 4=gnd 5=out"
-			(at 204.47 113.03 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Device" "SUBCKT"
-			(at 204.47 113.03 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Sim.Library" "/Users/joel/dev/cycfi/connect/pcb_common/kicad/cycfi_spice_library.sp"
-			(at 204.47 113.03 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Name" "cycfi_schmitt_nor"
-			(at 204.47 113.03 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Params" "VTH=0.5 VH=0.18 SHARP=0.06"
-			(at 204.47 113.03 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "73faec65-f739-45ee-8c91-d1a79583d8a4")
-		)
-		(pin "2"
-			(uuid "0a89e636-8afd-465c-8ad2-21756fe475a6")
-		)
-		(pin "3"
-			(uuid "e7641f51-8aee-4aaf-8232-febefa53cecf")
-		)
-		(pin "4"
-			(uuid "34f3e5e7-cd31-4344-a032-fe0902681153")
-		)
-		(pin "5"
-			(uuid "55cb7963-093f-46c3-b503-43f5744931de")
-		)
-		(instances
-			(project "e_whammy_control_v2_sim"
-				(path "/a157ea51-2828-471e-af10-4598cb486db8"
-					(reference "U7")
-					(unit 1)
+					(unit 2)
 				)
 			)
 		)
@@ -9175,7 +8215,7 @@
 	)
 	(symbol
 		(lib_id "power:+5V")
-		(at 330.2 158.75 0)
+		(at 341.63 156.21 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -9184,7 +8224,7 @@
 		(fields_autoplaced yes)
 		(uuid "eaf1a265-a11a-4942-abba-423a325b1d4b")
 		(property "Reference" "#PWR023"
-			(at 330.2 162.56 0)
+			(at 341.63 160.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9193,7 +8233,7 @@
 			)
 		)
 		(property "Value" "+5V"
-			(at 330.2 153.67 0)
+			(at 341.63 151.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9201,7 +8241,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 330.2 158.75 0)
+			(at 341.63 156.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9210,7 +8250,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 330.2 158.75 0)
+			(at 341.63 156.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9219,7 +8259,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 330.2 158.75 0)
+			(at 341.63 156.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9241,7 +8281,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 353.06 173.99 0)
+		(at 330.2 207.645 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -9250,7 +8290,7 @@
 		(fields_autoplaced yes)
 		(uuid "ef485af8-b380-4090-adc2-55a4f9c02817")
 		(property "Reference" "#PWR032"
-			(at 353.06 180.34 0)
+			(at 330.2 213.995 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9259,7 +8299,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 353.06 179.07 0)
+			(at 330.2 212.725 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9267,7 +8307,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 353.06 173.99 0)
+			(at 330.2 207.645 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9276,7 +8316,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 353.06 173.99 0)
+			(at 330.2 207.645 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9285,7 +8325,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 353.06 173.99 0)
+			(at 330.2 207.645 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9307,7 +8347,7 @@
 	)
 	(symbol
 		(lib_id "cycfi_spice_library:OPAMP")
-		(at 321.31 166.37 0)
+		(at 332.74 163.83 0)
 		(unit 2)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -9315,7 +8355,7 @@
 		(dnp no)
 		(uuid "ef6f5215-07b9-4a17-805f-f9ed17b448bb")
 		(property "Reference" "U2"
-			(at 322.58 161.29 0)
+			(at 334.01 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9323,7 +8363,7 @@
 			)
 		)
 		(property "Value" "${SIM.PARAMS}"
-			(at 329.565 163.1249 0)
+			(at 340.995 160.5849 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9332,7 +8372,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 321.31 166.37 0)
+			(at 332.74 163.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9341,7 +8381,7 @@
 			)
 		)
 		(property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#sec__SUBCKT_Subcircuits"
-			(at 321.31 166.37 0)
+			(at 332.74 163.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9350,7 +8390,7 @@
 			)
 		)
 		(property "Description" "Operational amplifier, single"
-			(at 321.31 166.37 0)
+			(at 332.74 163.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9359,7 +8399,7 @@
 			)
 		)
 		(property "Sim.Pins" "1=in+ 2=in- 3=vcc 4=vee 5=out"
-			(at 321.31 166.37 0)
+			(at 332.74 163.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9368,7 +8408,7 @@
 			)
 		)
 		(property "Sim.Device" "SUBCKT"
-			(at 321.31 166.37 0)
+			(at 332.74 163.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9378,7 +8418,7 @@
 			)
 		)
 		(property "Sim.Library" "${KICAD9_SYMBOL_DIR}/Simulation_SPICE.sp"
-			(at 321.31 166.37 0)
+			(at 332.74 163.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9387,7 +8427,7 @@
 			)
 		)
 		(property "Sim.Name" "kicad_builtin_opamp"
-			(at 321.31 166.37 0)
+			(at 332.74 163.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9396,7 +8436,7 @@
 			)
 		)
 		(property "Sim.Params" "POLE=1e6 GAIN=1e9 VOFF=0 ROUT=0.001"
-			(at 321.31 166.37 0)
+			(at 332.74 163.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9753,7 +8793,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 330.2 173.99 0)
+		(at 341.63 171.45 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -9762,7 +8802,7 @@
 		(fields_autoplaced yes)
 		(uuid "f5db3c60-9096-4eba-8881-204a29346fe9")
 		(property "Reference" "#PWR024"
-			(at 330.2 180.34 0)
+			(at 341.63 177.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9771,7 +8811,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 330.2 179.07 0)
+			(at 341.63 176.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9779,7 +8819,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 330.2 173.99 0)
+			(at 341.63 171.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9788,7 +8828,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 330.2 173.99 0)
+			(at 341.63 171.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9797,7 +8837,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 330.2 173.99 0)
+			(at 341.63 171.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9819,7 +8859,7 @@
 	)
 	(symbol
 		(lib_id "cycfi_spice_library:OPAMP")
-		(at 309.88 166.37 0)
+		(at 321.31 163.83 0)
 		(unit 2)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -9827,7 +8867,7 @@
 		(dnp no)
 		(uuid "f8152a9e-77ed-410d-af58-598ae26c0b9f")
 		(property "Reference" "U1"
-			(at 311.15 161.29 0)
+			(at 322.58 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9835,7 +8875,7 @@
 			)
 		)
 		(property "Value" "${SIM.PARAMS}"
-			(at 318.135 163.1249 0)
+			(at 329.565 160.5849 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9844,7 +8884,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 309.88 166.37 0)
+			(at 321.31 163.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9853,7 +8893,7 @@
 			)
 		)
 		(property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#sec__SUBCKT_Subcircuits"
-			(at 309.88 166.37 0)
+			(at 321.31 163.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9862,7 +8902,7 @@
 			)
 		)
 		(property "Description" "Operational amplifier, single"
-			(at 309.88 166.37 0)
+			(at 321.31 163.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9871,7 +8911,7 @@
 			)
 		)
 		(property "Sim.Pins" "1=in+ 2=in- 3=vcc 4=vee 5=out"
-			(at 309.88 166.37 0)
+			(at 321.31 163.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9880,7 +8920,7 @@
 			)
 		)
 		(property "Sim.Device" "SUBCKT"
-			(at 309.88 166.37 0)
+			(at 321.31 163.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9890,7 +8930,7 @@
 			)
 		)
 		(property "Sim.Library" "${KICAD9_SYMBOL_DIR}/Simulation_SPICE.sp"
-			(at 309.88 166.37 0)
+			(at 321.31 163.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9899,7 +8939,7 @@
 			)
 		)
 		(property "Sim.Name" "kicad_builtin_opamp"
-			(at 309.88 166.37 0)
+			(at 321.31 163.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9908,7 +8948,7 @@
 			)
 		)
 		(property "Sim.Params" "POLE=1e6 GAIN=1e9 VOFF=0 ROUT=0.001"
-			(at 309.88 166.37 0)
+			(at 321.31 163.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9936,74 +8976,6 @@
 				(path "/a157ea51-2828-471e-af10-4598cb486db8"
 					(reference "U1")
 					(unit 2)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R_Small")
-		(at 161.29 107.315 0)
-		(mirror y)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "fdcc98c5-1f53-4367-96c9-9bf1612bcd01")
-		(property "Reference" "R21"
-			(at 156.21 106.045 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "1Meg"
-			(at 156.21 108.585 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 161.29 107.315 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 161.29 107.315 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "startup ramp R"
-			(at 161.29 107.315 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "c52a5c08-3ba0-4d27-a52b-bd44bf358676")
-		)
-		(pin "2"
-			(uuid "766f68c4-4949-4981-8b04-c0f4875a930b")
-		)
-		(instances
-			(project "e_whammy_control_v2_sim"
-				(path "/a157ea51-2828-471e-af10-4598cb486db8"
-					(reference "R21")
-					(unit 1)
 				)
 			)
 		)
